@@ -286,6 +286,15 @@ function initNavbar() {
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+  /* Mobile: show nav logo only when hero logo scrolled out of view */
+  const heroLogo = document.querySelector('.hero-logo-img');
+  if (heroLogo) {
+    const logoObserver = new IntersectionObserver(entries => {
+      navbar.classList.toggle('nav-logo-visible', !entries[0].isIntersecting);
+    }, { threshold: 0 });
+    logoObserver.observe(heroLogo);
+  }
+
   /* Active section highlight */
   const sectionObserver = new IntersectionObserver(entries => {
     entries.forEach(e => {
@@ -457,131 +466,258 @@ function initForm() {
 const PROJECTS = {
   mbag: {
     brand:'KUKA', brandClass:'pb-kuka', year:'Sept. 2022 – April 2026',
-    title:'MBAG Gen5 – Batterielinie',
-    subtitle:'Roboterteamleitung | 4 Linien DE + 1 Linie Thailand | Prototyp bis Serie',
-    context:'Festanstellung bei GROB-WERKE GmbH im Auftrag Mercedes-Benz AG',
-    facts:[
-      {l:'Auftraggeber', v:'MBAG (Mercedes-Benz AG)'},
-      {l:'Umfang',       v:'5 Fertigungslinien'},
-      {l:'Region',       v:'Deutschland + Thailand'},
-      {l:'Phase',        v:'Prototyp bis Serie'},
-      {l:'Rolle',        v:'IBN-Roboterteamleiter'},
-      {l:'Fabrikat',     v:'KUKA KRC5'},
-      {l:'Standard',     v:'INTEGRA W7 (MBAG)'},
-      {l:'Besonderheit', v:'Intl. Einsatz · Klebe- & Kamera-IBN'},
-    ],
-    apps:[
-      {n:'Schraubroboter',            d:'Vollautom. Verschrauben von Batteriemodulen nach definierten Anzugsmomenten'},
-      {n:'Dichtmittelauftrag',         d:'Robotergeführter Dichtmittelauftrag mit dynamischer Bahnhöhenregelung'},
-      {n:'Batterieentnahme (Blister)', d:'Vollachsige Batterieentnahme aus Blister mit Kamera- & Laserlagekorrektur'},
-      {n:'Zellblock-Kombiklebestation',d:'Wärmeleitpaste-Auftrag & Verpressen nach Messtaster-Sollwerten'},
-      {n:'2K-Kleber-Fügeprozess',      d:'Dyn. Geschwindigkeits- & Parallelitätsregelung für exaktes Fixierkleben der Batterie'},
-      {n:'Roboter auf 7. Achse',       d:'Sicheres Batterie-Unterteil-Handling auf KUKA Linearachse (INTEGRA W7)'},
-      {n:'Schraubenbestückung',        d:'Kameragestützte Positionierung & Schraubenstecken ins Batterie-Unterteil'},
-    ],
-    appsLabel:'Realisierte Applikationen',
-    appsSub:'KUKA INTEGRA Welle 7',
-    chips:['Mercedes-Benz AG','GROB-WERKE','INTEGRA W7','5 Linien','International'],
+    chips:['Mercedes-Benz AG','GROB-WERKE','INTEGRA W7','5 Lines','International'],
+    de:{
+      title:'MBAG Gen5 – Batterielinie',
+      subtitle:'Roboterteamleitung | 4 Linien DE + 1 Linie Thailand | Prototyp bis Serie',
+      context:'Festanstellung bei GROB-WERKE GmbH im Auftrag Mercedes-Benz AG',
+      factsLabel:'Projekteckdaten',
+      facts:[
+        {l:'Auftraggeber', v:'MBAG (Mercedes-Benz AG)'},
+        {l:'Umfang',       v:'5 Fertigungslinien'},
+        {l:'Region',       v:'Deutschland + Thailand'},
+        {l:'Phase',        v:'Prototyp bis Serie'},
+        {l:'Rolle',        v:'IBN-Roboterteamleiter'},
+        {l:'Fabrikat',     v:'KUKA KRC5'},
+        {l:'Standard',     v:'INTEGRA W7 (MBAG)'},
+        {l:'Besonderheit', v:'Intl. Einsatz · Klebe- & Kamera-IBN'},
+      ],
+      appsLabel:'Realisierte Applikationen',
+      appsSub:'KUKA INTEGRA Welle 7',
+      apps:[
+        {n:'Schraubroboter',            d:'Vollautom. Verschrauben von Batteriemodulen nach definierten Anzugsmomenten'},
+        {n:'Dichtmittelauftrag',         d:'Robotergeführter Dichtmittelauftrag mit dynamischer Bahnhöhenregelung'},
+        {n:'Batterieentnahme (Blister)', d:'Vollachsige Batterieentnahme aus Blister mit Kamera- & Laserlagekorrektur'},
+        {n:'Zellblock-Kombiklebestation',d:'Wärmeleitpaste-Auftrag & Verpressen nach Messtaster-Sollwerten'},
+        {n:'2K-Kleber-Fügeprozess',      d:'Dyn. Geschwindigkeits- & Parallelitätsregelung für exaktes Fixierkleben der Batterie'},
+        {n:'Roboter auf 7. Achse',       d:'Sicheres Batterie-Unterteil-Handling auf KUKA Linearachse (INTEGRA W7)'},
+        {n:'Schraubenbestückung',        d:'Kameragestützte Positionierung & Schraubenstecken ins Batterie-Unterteil'},
+      ],
+    },
+    en:{
+      title:'MBAG Gen5 – Battery Line',
+      subtitle:'Robot Team Lead | 4 Lines DE + 1 Line Thailand | Prototype to Series',
+      context:'Permanent position at GROB-WERKE GmbH on behalf of Mercedes-Benz AG',
+      factsLabel:'Project Facts',
+      facts:[
+        {l:'Client',      v:'MBAG (Mercedes-Benz AG)'},
+        {l:'Scope',       v:'5 Production Lines'},
+        {l:'Region',      v:'Germany + Thailand'},
+        {l:'Phase',       v:'Prototype to Series'},
+        {l:'Role',        v:'Robot Commissioning Team Lead'},
+        {l:'Brand',       v:'KUKA KRC5'},
+        {l:'Standard',    v:'INTEGRA W7 (MBAG)'},
+        {l:'Highlight',   v:'Intl. deployment · Adhesive & camera IBN'},
+      ],
+      appsLabel:'Realized Applications',
+      appsSub:'KUKA INTEGRA Wave 7',
+      apps:[
+        {n:'Screw Robot',              d:'Fully automated tightening of battery modules to defined torque specs'},
+        {n:'Sealant Application',      d:'Robot-guided sealant application with dynamic path height control'},
+        {n:'Battery Extraction (Blister)',d:'Full-axis battery extraction from blister with camera & laser position correction'},
+        {n:'Cell Block Bonding Station',d:'Thermal paste application & pressing to probe setpoints'},
+        {n:'2K Adhesive Joining',      d:'Dynamic speed & parallelism control for precise battery fixation bonding'},
+        {n:'Robot on 7th Axis',        d:'Safe battery base handling on KUKA linear axis (INTEGRA W7)'},
+        {n:'Screw Loading',            d:'Camera-guided positioning & screw insertion into battery base'},
+      ],
+    },
   },
   emag: {
     brand:'FANUC / YASKAWA', brandClass:'pb-fanuc', year:'2019–2022',
-    title:'EMAG – HCM110',
-    subtitle:'Roboterintegration | Kugelkäfig-Fräsung',
-    context:'EMAG Systems GmbH',
-    facts:[
-      {l:'Fabrikate',  v:'FANUC & YASKAWA'},
-      {l:'Maschine',   v:'HCM110 Doppelspindel-Fräsmaschine'},
-      {l:'Prinzip',    v:'Pendelspindelprinzip'},
-      {l:'IBN-Region', v:'Mexiko (international)'},
-    ],
-    desc:'Integration von FANUC & YASKAWA Robotern in eine HCM110 Doppelspindel-Fräsmaschine nach dem Pendelspindelprinzip. Vollständige Programmierung & Inbetriebnahme vor Ort in Mexiko.',
-    chips:['EMAG','Mexiko','Handling','CNC'],
+    chips:['EMAG','Mexico','Handling','CNC'],
+    de:{
+      title:'EMAG – HCM110',
+      subtitle:'Roboterintegration | Kugelkäfig-Fräsung',
+      context:'EMAG Systems GmbH',
+      factsLabel:'Projekteckdaten',
+      facts:[
+        {l:'Fabrikate',  v:'FANUC & YASKAWA'},
+        {l:'Maschine',   v:'HCM110 Doppelspindel-Fräsmaschine'},
+        {l:'Prinzip',    v:'Pendelspindelprinzip'},
+        {l:'IBN-Region', v:'Mexiko (international)'},
+      ],
+      desc:'Integration von FANUC & YASKAWA Robotern in eine HCM110 Doppelspindel-Fräsmaschine nach dem Pendelspindelprinzip. Vollständige Programmierung & Inbetriebnahme vor Ort in Mexiko.',
+    },
+    en:{
+      title:'EMAG – HCM110',
+      subtitle:'Robot Integration | Ball Cage Milling',
+      context:'EMAG Systems GmbH',
+      factsLabel:'Project Facts',
+      facts:[
+        {l:'Brands',       v:'FANUC & YASKAWA'},
+        {l:'Machine',      v:'HCM110 Double-Spindle Milling Machine'},
+        {l:'Principle',    v:'Pendulum Spindle Principle'},
+        {l:'Comm. Region', v:'Mexico (international)'},
+      ],
+      desc:'Integration of FANUC & YASKAWA robots into an HCM110 double-spindle milling machine using the pendulum spindle principle. Full programming & commissioning on-site in Mexico.',
+    },
   },
   festool: {
     brand:'KUKA', brandClass:'pb-kuka', year:'2019–2022',
-    title:'Festool – Tschechien',
-    subtitle:'KUKA Stapelzelle | Palettierung',
-    context:'EMAG Systems GmbH',
-    facts:[
-      {l:'Fabrikat',   v:'KUKA'},
-      {l:'Applikation',v:'Palettierroboterzelle'},
-      {l:'Handling',   v:'Zahnräder & Wellen'},
-      {l:'IBN-Region', v:'Tschechien (international)'},
-    ],
-    desc:'Programmierung & IBN einer KUKA-Palettierroboterzelle für automatisiertes Zahnrad- und Wellen-Handling. Vollständige Beladung einer Verzahnungsschleifmaschine. IBN vor Ort in Tschechien.',
-    chips:['Festool','Tschechien','Palettierung','KUKA'],
+    chips:['Festool','Czech Republic','Palletizing','KUKA'],
+    de:{
+      title:'Festool – Tschechien',
+      subtitle:'KUKA Stapelzelle | Palettierung',
+      context:'EMAG Systems GmbH',
+      factsLabel:'Projekteckdaten',
+      facts:[
+        {l:'Fabrikat',   v:'KUKA'},
+        {l:'Applikation',v:'Palettierroboterzelle'},
+        {l:'Handling',   v:'Zahnräder & Wellen'},
+        {l:'IBN-Region', v:'Tschechien (international)'},
+      ],
+      desc:'Programmierung & IBN einer KUKA-Palettierroboterzelle für automatisiertes Zahnrad- und Wellen-Handling. Vollständige Beladung einer Verzahnungsschleifmaschine. IBN vor Ort in Tschechien.',
+    },
+    en:{
+      title:'Festool – Czech Republic',
+      subtitle:'KUKA Stacking Cell | Palletizing',
+      context:'EMAG Systems GmbH',
+      factsLabel:'Project Facts',
+      facts:[
+        {l:'Brand',       v:'KUKA'},
+        {l:'Application', v:'Palletizing Robot Cell'},
+        {l:'Handling',    v:'Gears & Shafts'},
+        {l:'Comm. Region',v:'Czech Republic (international)'},
+      ],
+      desc:'Programming & commissioning of a KUKA palletizing robot cell for automated gear and shaft handling. Full loading of a gear grinding machine. Commissioning on-site in Czech Republic.',
+    },
   },
   sew: {
     brand:'KUKA', brandClass:'pb-kuka', year:'2019–2022',
-    title:'SEW-Eurodrive',
-    subtitle:'3D-Bin-Picking | Hohlwellen',
-    context:'EMAG Systems GmbH',
-    facts:[
-      {l:'Fabrikat',  v:'KUKA'},
-      {l:'Sensor',    v:'Keyence 3D-Kamera'},
-      {l:'Methode',   v:'3D-Punktwolkenerfassung'},
-      {l:'Bauteil',   v:'Hohlwellen aus Schüttgut'},
-    ],
-    desc:'Erstimplementierung eines kameragestützten Bin-Picking-Systems: 3D-Punktwolkenerfassung per Keyence zur Lageerkennung und Einzelentnahme von Hohlwellen aus dem Schüttgutbehälter.',
     chips:['SEW','Keyence','Bin-Picking','KUKA'],
+    de:{
+      title:'SEW-Eurodrive',
+      subtitle:'3D-Bin-Picking | Hohlwellen',
+      context:'EMAG Systems GmbH',
+      factsLabel:'Projekteckdaten',
+      facts:[
+        {l:'Fabrikat',  v:'KUKA'},
+        {l:'Sensor',    v:'Keyence 3D-Kamera'},
+        {l:'Methode',   v:'3D-Punktwolkenerfassung'},
+        {l:'Bauteil',   v:'Hohlwellen aus Schüttgut'},
+      ],
+      desc:'Erstimplementierung eines kameragestützten Bin-Picking-Systems: 3D-Punktwolkenerfassung per Keyence zur Lageerkennung und Einzelentnahme von Hohlwellen aus dem Schüttgutbehälter.',
+    },
+    en:{
+      title:'SEW-Eurodrive',
+      subtitle:'3D Bin-Picking | Hollow Shafts',
+      context:'EMAG Systems GmbH',
+      factsLabel:'Project Facts',
+      facts:[
+        {l:'Brand',   v:'KUKA'},
+        {l:'Sensor',  v:'Keyence 3D Camera'},
+        {l:'Method',  v:'3D Point Cloud Detection'},
+        {l:'Part',    v:'Hollow Shafts from Bulk Container'},
+      ],
+      desc:'First implementation of a camera-based bin-picking system: 3D point cloud detection via Keyence for position recognition and individual extraction of hollow shafts from bulk containers.',
+    },
   },
   schmidt: {
     brand:'FANUC', brandClass:'pb-fanuc', year:'2019–2022',
-    title:'Schmidt Automotive',
-    subtitle:'Doppelgreifer-System',
-    context:'EMAG Systems GmbH',
-    facts:[
-      {l:'Fabrikat',   v:'FANUC'},
-      {l:'System',     v:'Doppelgreifer-Robotersystem'},
-      {l:'Aufgabe',    v:'Be- & Entladung CNC-Zentren'},
-      {l:'Betrieb',    v:'Simultaner Doppelbetrieb'},
-    ],
-    desc:'Programmierung & IBN eines Doppelgreifer-Robotersystems zur simultanen Be- und Entladung mehrerer CNC-Bearbeitungszentren.',
     chips:['Automotive','CNC','Handling','FANUC'],
+    de:{
+      title:'Schmidt Automotive',
+      subtitle:'Doppelgreifer-System',
+      context:'EMAG Systems GmbH',
+      factsLabel:'Projekteckdaten',
+      facts:[
+        {l:'Fabrikat',   v:'FANUC'},
+        {l:'System',     v:'Doppelgreifer-Robotersystem'},
+        {l:'Aufgabe',    v:'Be- & Entladung CNC-Zentren'},
+        {l:'Betrieb',    v:'Simultaner Doppelbetrieb'},
+      ],
+      desc:'Programmierung & IBN eines Doppelgreifer-Robotersystems zur simultanen Be- und Entladung mehrerer CNC-Bearbeitungszentren.',
+    },
+    en:{
+      title:'Schmidt Automotive',
+      subtitle:'Dual Gripper System',
+      context:'EMAG Systems GmbH',
+      factsLabel:'Project Facts',
+      facts:[
+        {l:'Brand',     v:'FANUC'},
+        {l:'System',    v:'Dual Gripper Robot System'},
+        {l:'Task',      v:'Loading & Unloading CNC Centers'},
+        {l:'Operation', v:'Simultaneous Dual Operation'},
+      ],
+      desc:'Programming & commissioning of a dual gripper robot system for simultaneous loading and unloading of multiple CNC machining centers.',
+    },
   },
   eldec: {
     brand:'FANUC', brandClass:'pb-fanuc', year:'2019–2022',
-    title:'Eldec – Charleston, USA',
-    subtitle:'Roboter-Handling | eldec-MIND',
-    context:'EMAG Systems GmbH',
-    facts:[
-      {l:'Fabrikat',   v:'FANUC'},
-      {l:'Anlage',     v:'eldec-MIND Induktionshärteanlage'},
-      {l:'Bauteile',   v:'Lager-Außen- & Innenringe'},
-      {l:'IBN-Region', v:'Charleston, USA (international)'},
-    ],
-    desc:'Programmierung & IBN eines Roboter-Handlingsystems für Lager-außen- und -innenringe. Vollautomatische Beladung einer eldec-MIND Induktionshärteanlage. Internationaler Einsatz in Charleston, USA.',
     chips:['Eldec','USA','International','FANUC'],
+    de:{
+      title:'Eldec – Charleston, USA',
+      subtitle:'Roboter-Handling | eldec-MIND',
+      context:'EMAG Systems GmbH',
+      factsLabel:'Projekteckdaten',
+      facts:[
+        {l:'Fabrikat',   v:'FANUC'},
+        {l:'Anlage',     v:'eldec-MIND Induktionshärteanlage'},
+        {l:'Bauteile',   v:'Lager-Außen- & Innenringe'},
+        {l:'IBN-Region', v:'Charleston, USA (international)'},
+      ],
+      desc:'Programmierung & IBN eines Roboter-Handlingsystems für Lager-außen- und -innenringe. Vollautomatische Beladung einer eldec-MIND Induktionshärteanlage. Internationaler Einsatz in Charleston, USA.',
+    },
+    en:{
+      title:'Eldec – Charleston, USA',
+      subtitle:'Robot Handling | eldec-MIND',
+      context:'EMAG Systems GmbH',
+      factsLabel:'Project Facts',
+      facts:[
+        {l:'Brand',       v:'FANUC'},
+        {l:'System',      v:'eldec-MIND Induction Hardening'},
+        {l:'Parts',       v:'Bearing Outer & Inner Rings'},
+        {l:'Comm. Region',v:'Charleston, USA (international)'},
+      ],
+      desc:'Programming & commissioning of a robot handling system for bearing outer and inner rings. Fully automatic loading of an eldec-MIND induction hardening system. International deployment in Charleston, USA.',
+    },
   },
   hawle: {
     brand:'KUKA', brandClass:'pb-kuka', year:'2019–2022',
-    title:'Hawle Armaturen – Freilassing',
-    subtitle:'3D-Bin-Picking | Armaturenteile',
-    context:'EMAG Systems GmbH',
-    facts:[
-      {l:'Fabrikat',   v:'KUKA'},
-      {l:'Sensor',     v:'Kamerasystem'},
-      {l:'Bauteil',    v:'Armaturenteile aus Schüttgut'},
-      {l:'Übergabe',   v:'EMAG-Drehmaschine'},
-    ],
-    desc:'Kameragestütztes Bin-Picking-System zur Entnahme von Armaturenteilen aus dem Schüttgutbehälter. Robotergeführte Übergabe an EMAG-Drehmaschine zur vollautomatischen Bearbeitung.',
     chips:['Hawle Armaturen','Freilassing','Bin-Picking'],
+    de:{
+      title:'Hawle Armaturen – Freilassing',
+      subtitle:'3D-Bin-Picking | Armaturenteile',
+      context:'EMAG Systems GmbH',
+      factsLabel:'Projekteckdaten',
+      facts:[
+        {l:'Fabrikat',   v:'KUKA'},
+        {l:'Sensor',     v:'Kamerasystem'},
+        {l:'Bauteil',    v:'Armaturenteile aus Schüttgut'},
+        {l:'Übergabe',   v:'EMAG-Drehmaschine'},
+      ],
+      desc:'Kameragestütztes Bin-Picking-System zur Entnahme von Armaturenteilen aus dem Schüttgutbehälter. Robotergeführte Übergabe an EMAG-Drehmaschine zur vollautomatischen Bearbeitung.',
+    },
+    en:{
+      title:'Hawle Armaturen – Freilassing',
+      subtitle:'3D Bin-Picking | Valve Components',
+      context:'EMAG Systems GmbH',
+      factsLabel:'Project Facts',
+      facts:[
+        {l:'Brand',    v:'KUKA'},
+        {l:'Sensor',   v:'Camera System'},
+        {l:'Part',     v:'Valve Components from Bulk Container'},
+        {l:'Transfer', v:'EMAG Lathe'},
+      ],
+      desc:'Camera-based bin-picking system for extracting valve components from bulk containers. Robot-guided transfer to an EMAG lathe for fully automated machining.',
+    },
   },
 };
 
 function renderModal(id) {
   const p = PROJECTS[id];
   if (!p) return '';
+  const d = p[lang] || p.de;
 
-  const factsHTML = p.facts.map(f =>
+  const factsHTML = d.facts.map(f =>
     `<div class="mf-cell"><span class="mf-label">${f.l}</span><span class="mf-val">${f.v}</span></div>`
   ).join('');
 
-  const appsHTML = p.apps ? `
+  const appsHTML = d.apps ? `
     <div class="modal-section">
-      <div class="modal-section-title">${p.appsLabel || 'Applikationen'}<span class="modal-apps-sub">${p.appsSub || ''}</span></div>
+      <div class="modal-section-title">${d.appsLabel}<span class="modal-apps-sub">${d.appsSub || ''}</span></div>
       <div class="modal-app-list">
-        ${p.apps.map(a => `
+        ${d.apps.map(a => `
           <div class="modal-app-item">
             <div class="modal-app-name">${a.n}</div>
             <div class="modal-app-desc">${a.d}</div>
@@ -589,13 +725,13 @@ function renderModal(id) {
       </div>
     </div>` : '';
 
-  const descHTML = p.desc ? `
+  const descHTML = d.desc ? `
     <div class="modal-section">
-      <p class="modal-desc">${p.desc}</p>
+      <p class="modal-desc">${d.desc}</p>
       <div class="modal-chips">${p.chips.map(c => `<span>${c}</span>`).join('')}</div>
     </div>` : '';
 
-  const chipsOnlyHTML = (!p.desc && p.chips) ? `
+  const chipsOnlyHTML = (!d.desc && p.chips) ? `
     <div class="modal-section">
       <div class="modal-chips">${p.chips.map(c => `<span>${c}</span>`).join('')}</div>
     </div>` : '';
@@ -606,12 +742,12 @@ function renderModal(id) {
         <span class="proj-brand ${p.brandClass}">${p.brand}</span>
         <span class="modal-year">${p.year}</span>
       </div>
-      <h2 class="modal-title" id="modalTitle">${p.title}</h2>
-      <div class="modal-subtitle">${p.subtitle}</div>
-      <div class="modal-context">${p.context}</div>
+      <h2 class="modal-title" id="modalTitle">${d.title}</h2>
+      <div class="modal-subtitle">${d.subtitle}</div>
+      <div class="modal-context">${d.context}</div>
     </div>
     <div class="modal-section">
-      <div class="modal-section-title">Projekteckdaten</div>
+      <div class="modal-section-title">${d.factsLabel}</div>
       <div class="modal-facts-grid">${factsHTML}</div>
     </div>
     ${appsHTML}

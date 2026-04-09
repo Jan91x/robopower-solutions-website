@@ -1197,8 +1197,9 @@ section{position:relative;z-index:1}
   .proj-featured{grid-column:span 1}
 
   .section-container{padding:var(--gap) 20px}
-  .nav-inner{padding:0 20px;justify-content:center;position:relative}
-  .nav-hamburger{position:absolute;right:20px}
+  .nav-inner{padding:0 20px}
+  .nav-logo{opacity:0;pointer-events:none;transition:opacity .3s ease}
+  #navbar.nav-logo-visible .nav-logo{opacity:1;pointer-events:auto}
 }
 
 @media(max-width:480px){

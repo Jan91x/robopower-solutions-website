@@ -134,8 +134,17 @@
       <!-- Left col -->
       <div class="about-left">
         <div class="profile-card">
-          <div class="profile-avatar">
+          <div class="profile-avatar" id="profileAvatarBtn" role="button" tabindex="0" aria-label="Foto vergrößern" style="cursor:zoom-in">
             <img src="Infos/Profilfoto.png" alt="Jan Bremauer" class="profile-photo">
+          </div>
+
+          <!-- Photo lightbox -->
+          <div id="photoLightbox" class="photo-lightbox" role="dialog" aria-modal="true" aria-label="Profilfoto" style="display:none">
+            <div class="photo-lightbox-backdrop"></div>
+            <div class="photo-lightbox-img-wrap">
+              <img src="Infos/Profilfoto.png" alt="Jan Bremauer">
+              <button class="photo-lightbox-close" aria-label="Schließen">✕</button>
+            </div>
           </div>
           <div class="profile-name">JAN BREMAUER</div>
           <div class="profile-role" data-i18n="about.role">Ihr Spezialist für industrielle Robotik</div>

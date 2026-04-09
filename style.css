@@ -1093,6 +1093,42 @@ section{position:relative;z-index:1}
 .reveal.visible{opacity:1;transform:translateY(0)}
 
 /* ================================================================
+   PHOTO LIGHTBOX
+   ================================================================ */
+.photo-lightbox{
+  position:fixed;inset:0;z-index:9000;
+  display:flex;align-items:center;justify-content:center;
+}
+.photo-lightbox-backdrop{
+  position:absolute;inset:0;
+  background:rgba(0,0,0,.85);
+  backdrop-filter:blur(8px);
+  cursor:zoom-out;
+}
+.photo-lightbox-img-wrap{
+  position:relative;z-index:1;
+  max-width:min(520px,90vw);
+  animation:fadeUp .25s var(--ease) forwards;
+}
+.photo-lightbox-img-wrap img{
+  width:100%;height:auto;
+  display:block;
+  border:2px solid var(--border2);
+}
+.photo-lightbox-close{
+  position:absolute;top:-14px;right:-14px;
+  width:32px;height:32px;
+  background:var(--surface);border:1px solid var(--border2);
+  color:var(--text-dim);font-size:14px;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;transition:color .2s,border-color .2s;
+  border-radius:0;
+}
+.photo-lightbox-close:hover{color:var(--accent);border-color:var(--accent)}
+
+#profileAvatarBtn:hover .profile-photo{opacity:.85;transition:opacity .2s}
+
+/* ================================================================
    RESPONSIVE
    ================================================================ */
 @media(max-width:1024px){

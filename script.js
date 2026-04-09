@@ -667,4 +667,32 @@ document.addEventListener('DOMContentLoaded', () => {
   initForm();
   initModal();
   initBackToTop();
+  initPhotoLightbox();
 });
+
+/* ================================================================
+   PHOTO LIGHTBOX
+   ================================================================ */
+function initPhotoLightbox() {
+  const btn      = document.getElementById('profileAvatarBtn');
+  const lightbox = document.getElementById('photoLightbox');
+  if (!btn || !lightbox) return;
+
+  const backdrop = lightbox.querySelector('.photo-lightbox-backdrop');
+  const close    = lightbox.querySelector('.photo-lightbox-close');
+
+  function open() {
+    lightbox.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLb() {
+    lightbox.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  btn.addEventListener('click', open);
+  btn.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') open(); });
+  backdrop.addEventListener('click', closeLb);
+  close.addEventListener('click', closeLb);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
+}

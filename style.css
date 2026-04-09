@@ -1162,9 +1162,25 @@ section{position:relative;z-index:1}
   .lang-switcher{margin-left:0;margin-top:10px}
 
   #hero{flex-direction:column;min-height:auto}
-  .hero-content{margin:0;padding:60px 20px 32px}
+  .hero-content{margin:0;padding:32px 20px 32px;text-align:center}
+  .hero-name{display:flex;justify-content:center}
+  .hero-logo-img{width:clamp(200px,65vw,360px)}
+  .hero-disciplines{justify-content:center}
+  .hero-person{justify-content:center}
+  .hero-actions{justify-content:center}
   .hero-visual{display:none}
-  .hero-name{font-size:clamp(36px,11vw,64px)}
+  .hero-mobile-img{
+    display:block;
+    width:100%;
+    height:220px;
+    overflow:hidden;
+    flex-shrink:0;
+  }
+  .hero-mobile-img img{
+    width:100%;height:100%;
+    object-fit:cover;object-position:center 40%;
+    display:block;
+  }
   .stat-item{padding:18px 16px}
   .stat-num{font-size:32px}
   .stat-plus{font-size:20px}
@@ -1178,7 +1194,8 @@ section{position:relative;z-index:1}
   .proj-featured{grid-column:span 1}
 
   .section-container{padding:var(--gap) 20px}
-  .nav-inner{padding:0 20px}
+  .nav-inner{padding:0 20px;justify-content:center;position:relative}
+  .nav-hamburger{position:absolute;right:20px}
 }
 
 @media(max-width:480px){

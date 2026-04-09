@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RoboPower Solutions – Industrielle Roboterprogrammierung & IBN</title>
+  <meta name="description" content="Spezialisierter Robotik-Dienstleister für Automotive, Maschinenbau & Anlagenbau. KUKA · FANUC · Yaskawa. 10+ Jahre Projekterfahrung. Bundesweit & International.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Infos/noBgColor.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="RoboPower Solutions – Industrielle Roboterprogrammierung & IBN">
+  <meta property="og:description" content="Spezialisierter Robotik-Dienstleister für Automotive, Maschinenbau & Anlagenbau. KUKA · FANUC · Yaskawa. 10+ Jahre Projekterfahrung. Bundesweit & International.">
+  <meta property="og:image"       content="Infos/my-project-page-1 (7).png">
+  <meta property="og:locale"      content="de_DE">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900;1,14..32,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <img src="Infos/noBgColor.png" alt="RoboPower Solutions" class="nav-logo-img">
+    </a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="#about"    class="nav-link" data-i18n="nav.about">Über uns</a>
+      <a href="#services" class="nav-link" data-i18n="nav.services">Leistungen</a>
+      <a href="#projects" class="nav-link" data-i18n="nav.projects">Projekte</a>
+      <a href="#contact"  class="nav-link" data-i18n="nav.contact">Kontakt</a>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="de">DE</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO
+     ═══════════════════════════════════════════════════════════ -->
+<section id="hero">
+
+  <!-- Content -->
+  <div class="hero-content">
+    <h1 class="hero-name">
+      <img src="Infos/noBgColor.png" alt="RoboPower Solutions" class="hero-logo-img">
+    </h1>
+
+    <div class="hero-core">
+      <div class="hero-core-title" data-i18n="hero.core">Robotik. Präzise. Zuverlässig. Serienreif.</div>
+      <div class="hero-brands">
+        <span>KUKA</span><span class="hb-sep">|</span><span>FANUC</span><span class="hb-sep">|</span><span>Yaskawa</span>
+      </div>
+      <div class="hero-disciplines">
+        <span data-i18n="hd.prog">Programmierung</span>
+        <span class="hd-dot">•</span>
+        <span data-i18n="hd.safety">Safety</span>
+        <span class="hd-dot">•</span>
+        <span data-i18n="hd.comm">Inbetriebnahme</span>
+        <span class="hd-dot">•</span>
+        <span data-i18n="hd.opt">Optimierung</span>
+        <span class="hd-dot">•</span>
+        <span data-i18n="hd.pm">Projektleitung / Consulting</span>
+      </div>
+    </div>
+
+    <div class="hero-person">
+      <span class="hero-person-by" data-i18n="hero.by">Gründer & Inhaber:</span>
+      <span class="hero-person-name">Jan Bremauer</span>
+    </div>
+
+    <div class="hero-actions">
+      <a href="#contact"  class="btn-primary" data-i18n="hero.cta">Kontakt aufnehmen</a>
+      <a href="#services" class="btn-ghost"   data-i18n="hero.cta2">Leistungen entdecken</a>
+      <a href="Infos/Jan_Bremauer_Profil.pdf" download class="btn-ghost btn-icon" data-i18n="hero.cv">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Kompetenzprofil
+      </a>
+    </div>
+  </div>
+
+  <!-- Robot image (right, absolute) -->
+  <div class="hero-visual">
+    <img src="Infos/my-project-page-1 (7).png" alt="KUKA, YASKAWA & FANUC Industrieroboter" class="hero-robot-img">
+    <div class="hero-img-overlay"></div>
+  </div>
+
+  <!-- Stats bar -->
+  <div class="hero-stats">
+    <div class="stat-item">
+      <div class="stat-num-wrap"><span class="stat-num" data-target="10">0</span><span class="stat-plus">+</span></div>
+      <span class="stat-label" data-i18n="stats.years">Jahre Erfahrung</span>
+    </div>
+    <div class="stat-div"></div>
+    <div class="stat-item">
+      <div class="stat-num-wrap"><span class="stat-num" data-target="3">0</span></div>
+      <span class="stat-label" data-i18n="stats.brands">Fabrikate</span>
+    </div>
+    <div class="stat-div"></div>
+    <div class="stat-item">
+      <div class="stat-num-wrap"><span class="stat-num" data-target="6">0</span><span class="stat-plus">+</span></div>
+      <span class="stat-label" data-i18n="stats.countries">Länder</span>
+    </div>
+    <div class="stat-div"></div>
+    <div class="stat-item">
+      <div class="stat-num-wrap"><span class="stat-num" data-target="10">0</span><span class="stat-plus">+</span></div>
+      <span class="stat-label" data-i18n="stats.certs">Zertifizierungen</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     ABOUT
+     ═══════════════════════════════════════════════════════════ -->
+<section id="about">
+  <div class="section-container">
+    <div class="section-header">
+      <div class="section-tag" data-i18n="about.tag">01 / ÜBER UNS</div>
+      <h2 class="section-title" data-i18n="about.title">Wer wir sind</h2>
+    </div>
+    <div class="about-grid">
+
+      <!-- Left col -->
+      <div class="about-left">
+        <div class="profile-card">
+          <div class="profile-avatar">
+            <img src="Infos/Profilfoto.png" alt="Jan Bremauer" class="profile-photo">
+          </div>
+          <div class="profile-name">JAN BREMAUER</div>
+          <div class="profile-role" data-i18n="about.role">Ihr Spezialist für industrielle Robotik</div>
+          <div class="profile-avail">
+            <span class="avail-dot"></span>
+            <span data-i18n="about.avail">Ab sofort verfügbar</span>
+          </div>
+        </div>
+
+        <div class="meta-grid">
+          <div class="meta-cell">
+            <div class="meta-label" data-i18n="meta.location">Standort</div>
+            <div class="meta-val">Göppingen / BW</div>
+          </div>
+          <div class="meta-cell">
+            <div class="meta-label" data-i18n="meta.deploy">Einsatz</div>
+            <div class="meta-val" data-i18n="meta.deployVal">DE + International</div>
+          </div>
+          <div class="meta-cell">
+            <div class="meta-label" data-i18n="meta.lang">Sprachen</div>
+            <div class="meta-val" data-i18n="meta.langVal">Deutsch · Englisch</div>
+          </div>
+          <div class="meta-cell">
+            <div class="meta-label" data-i18n="meta.type">Einsatzart</div>
+            <div class="meta-val" data-i18n="meta.typeVal">Vor Ort & Remote</div>
+          </div>
+          <div class="meta-cell">
+            <div class="meta-label" data-i18n="meta.legal">Rechtliches</div>
+            <div class="meta-val" data-i18n="meta.legalVal">EU-Arbeitserlaubnis</div>
+          </div>
+          <div class="meta-cell">
+            <div class="meta-label" data-i18n="meta.insurance">Versicherung</div>
+            <div class="meta-val" data-i18n="meta.insuranceVal">Berufshaftpflicht aktiv</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right col -->
+      <div class="about-right">
+        <p class="about-body" data-i18n="about.text">RoboPower Solutions ist ein spezialisierter Robotik-Dienstleister für Automotive, Maschinenbau und Anlagenbau. Wir bringen 10+ Jahre Projekterfahrung in Programmierung, Safety-Abnahmen und Inbetriebnahme mit — von der ersten Codezeile bis zum Serienstart. Als inhabergeführtes Unternehmen agieren wir mit kurzen Entscheidungswegen und einem persönlichen Ansprechpartner. Unser Ziel: zuverlässige Lösungen, die im ersten Anlauf funktionieren. Wir arbeiten bundesweit und international — flexibel, termingebunden, ergebnisorientiert.</p>
+
+        <div class="focus-tags">
+          <span data-i18n="focus.automotive">Automotive</span>
+          <span data-i18n="focus.plant">Anlagenbau</span>
+          <span data-i18n="focus.mfg">Fertigungsautomatisierung</span>
+        </div>
+
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-period">2022–2026</div>
+            <div class="tl-body">
+              <div class="tl-role"  data-i18n="exp1.role">Lead-Koordinator Roboterinbetriebnahme</div>
+              <div class="tl-co">GROB-WERKE / Mercedes-Benz AG</div>
+              <div class="tl-detail" data-i18n="exp1.detail">MBAG Gen5 Batterielinie · KUKA KRC5 · INTEGRA W7</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-period">2019–2022</div>
+            <div class="tl-body">
+              <div class="tl-role" data-i18n="exp2.role">Roboterprogrammierer & Inbetriebnehmer</div>
+              <div class="tl-co">EMAG Systems GmbH</div>
+              <div class="tl-detail">KUKA · FANUC · YASKAWA · DE / USA / MEX / CZ</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-period">2017–2019</div>
+            <div class="tl-body">
+              <div class="tl-role" data-i18n="exp3.role">Staatl. gepr. Techniker</div>
+              <div class="tl-co" data-i18n="exp3.co">Max-Eyth Schule, Kirchheim u. T.</div>
+              <div class="tl-detail" data-i18n="exp3.detail">Automatisierungstechnik / Mechatronik</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-period">2015–2017</div>
+            <div class="tl-body">
+              <div class="tl-role" data-i18n="exp4.role">Service- & Anwendungstechniker</div>
+              <div class="tl-co">E-COS Co., Ltd.</div>
+              <div class="tl-detail" data-i18n="exp4.detail">5-Achs-CNC-Maschinen · Thailand</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="certs">
+          <div class="cert-row">
+            <span class="cert-brand kb-kuka">KUKA</span>
+            <div class="cert-chips">
+              <span data-i18n="cert.kuka1">Roboterprogrammierung 1 (2019)</span>
+              <span data-i18n="cert.kuka2">IBN KRC4 (2019)</span>
+              <span data-i18n="cert.kuka3">SafeOperation 3.x (2021)</span>
+              <span data-i18n="cert.kuka4">Roboterprogrammierung 2 (2021)</span>
+            </div>
+          </div>
+          <div class="cert-row">
+            <span class="cert-brand kb-fanuc">FANUC</span>
+            <div class="cert-chips">
+              <span>HandlingTool (2020)</span>
+              <span>DCS (2020)</span>
+              <span>Karel (2021)</span>
+            </div>
+          </div>
+          <div class="cert-row">
+            <span class="cert-brand kb-yaskawa">YASKAWA</span>
+            <div class="cert-chips">
+              <span>YRC-Generation (2021)</span>
+              <span>FSU Safety YRC1000 (2021)</span>
+            </div>
+          </div>
+          <div class="cert-row">
+            <span class="cert-brand kb-integra">INTEGRA W7</span>
+            <div class="cert-chips">
+              <span data-i18n="cert.integra">Mercedes-Benz OEM-Standard (2023)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SERVICES
+     ═══════════════════════════════════════════════════════════ -->
+<section id="services">
+  <div class="section-container">
+    <div class="section-header">
+      <div class="section-tag" data-i18n="services.tag">02 / LEISTUNGEN</div>
+      <h2 class="section-title" data-i18n="services.title">Was wir leisten</h2>
+    </div>
+    <div class="svc-grid">
+
+      <div class="svc-card">
+        <div class="svc-img"><img src="Infos/my-project-page-1 (17).png" alt="KUKA Roboter"></div>
+        <div class="svc-badge badge-kuka">K</div>
+        <h3 class="svc-name">KUKA</h3>
+        <p class="svc-desc" data-i18n="svc.kuka">Wir programmieren und nehmen KUKA-Roboter mit KRL auf KRC4- und KRC5-Steuerungen in Betrieb. Offline-Simulation mit KUKA.Sim, Konfiguration mit WorkVisual — vom Einzelsystem bis zur Serienanlage. Ihr Nutzen: kürzere Anlaufzeiten, reproduzierbare Qualität.</p>
+        <div class="svc-chips"><span>KRL</span><span>KRC4/KRC5</span><span>KUKA.Sim</span><span>WorkVisual</span></div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-img"><img src="Infos/my-project-page-1 (16).png" alt="FANUC Roboter"></div>
+        <div class="svc-badge badge-fanuc">F</div>
+        <h3 class="svc-name">FANUC</h3>
+        <p class="svc-desc" data-i18n="svc.fanuc">Programmierung & IBN mit TP und Karel. Simulation in Roboguide. Umfassende Expertise auf R-30iB / iD Controllern. Ihr Nutzen: bewährte Methodik, direkt einsetzbar.</p>
+        <div class="svc-chips"><span>TP</span><span>Karel</span><span>Roboguide</span><span>R-30iB/iD</span></div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-img"><img src="Infos/my-project-page-1 (14).png" alt="YASKAWA Roboter"></div>
+        <div class="svc-badge badge-yaskawa">Y</div>
+        <h3 class="svc-name">YASKAWA</h3>
+        <p class="svc-desc" data-i18n="svc.yaskawa">Roboterprogrammierung & IBN für Yaskawa Motoman. Offline-Simulation mit MotoSim EG-VRC. Ihr Nutzen: herstellerübergreifende Kompetenz aus einer Hand.</p>
+        <div class="svc-chips"><span>Motoman</span><span>MotoSim EG-VRC</span><span>FSU</span></div>
+      </div>
+
+      <div class="svc-card svc-featured">
+        <div class="svc-badge badge-safety">S</div>
+        <h3 class="svc-name" data-i18n="svc.safety.name">Safety-Abnahmen</h3>
+        <p class="svc-desc" data-i18n="svc.safety">Sicherheitskonfiguration, Zonen-Setup und Freigabe nach Maschinenrichtlinie. SafeOperation 3.4, DCS und FSU — herstellerübergreifend. Ihr Nutzen: rechtssichere Abnahmen ohne Verzögerung.</p>
+        <div class="svc-chips"><span>SafeOperation 3.4</span><span>DCS</span><span>FSU</span></div>
+      </div>
+
+      <div class="svc-card svc-featured">
+        <div class="svc-badge badge-integra">W7</div>
+        <h3 class="svc-name">INTEGRA W7</h3>
+        <p class="svc-desc" data-i18n="svc.integra">Standardisierung nach Mercedes-Benz AG Richtlinie INTEGRA W7. Konforme IBN von KUKA KRC5 Robotersystemen im OEM-Umfeld. Ihr Nutzen: direkte OEM-Freigabe, keine Nacharbeiten.</p>
+        <div class="svc-chips"><span>MBAG-Standard</span><span>KUKA KRC5</span><span>Zertifiziert 2023</span></div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-badge badge-ibn">IBN</div>
+        <h3 class="svc-name" data-i18n="svc.ibn.name">Inbetriebnahme & Projektleitung</h3>
+        <p class="svc-desc" data-i18n="svc.ibn">Wir übernehmen die Gesamtprojekt-IBN bis zur Serienreife — inklusive Teamkoordination bei komplexen Anlageneinläufen und PROFINET/SPS-Anbindung. Ihr Nutzen: ein Ansprechpartner, volle Verantwortung.</p>
+        <div class="svc-chips"><span>Teamleitung</span><span>PROFINET</span><span>SPS</span><span>Serienanlauf</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PROJECTS
+     ═══════════════════════════════════════════════════════════ -->
+<section id="projects">
+  <div class="section-container">
+    <div class="section-header">
+      <div class="section-tag" data-i18n="projects.tag">03 / REFERENZEN</div>
+      <h2 class="section-title" data-i18n="projects.title">Unsere Projektreferenzen</h2>
+      <p class="section-sub" data-i18n="projects.subtitle">Realisiert bei EMAG Systems GmbH (2019–2022) & GROB-WERKE / MBAG (2022–2026)</p>
+    </div>
+    <div class="proj-grid">
+
+      <!-- FEATURED -->
+      <div class="proj-card proj-featured proj-featured--hl proj-clickable" data-project="mbag" role="button" tabindex="0" aria-haspopup="dialog">
+        <span class="mbag-badge" data-i18n="badge.flagship">Flagship-Projekt</span>
+        <div class="proj-img"><img src="Infos/my-project-page-1 (12).png" alt="MBAG Batterielinie"></div>
+        <div class="proj-top">
+          <span class="proj-brand pb-kuka">KUKA</span>
+          <span class="proj-year">2022–2026</span>
+        </div>
+        <h3 class="proj-name" data-i18n="proj1.name">MBAG Gen5 – Batterielinie</h3>
+        <div class="proj-role" data-i18n="proj1.role">Lead-Koordinator Roboterinbetriebnahme</div>
+        <p class="proj-desc" data-i18n="proj1.desc">Wir koordinierten den Serienanlauf der Mercedes-Benz Gen5 Batteriemontagelinie — 4 Linien in Deutschland, 1 Linie in Thailand. Verantwortlich für über 10 KUKA KRC5-Roboterzellen, INTEGRA W7 konform, vom Prototyp bis zur Serienfreigabe.</p>
+        <div class="proj-chips">
+          <span>Mercedes-Benz AG</span><span>GROB-WERKE</span><span>INTEGRA W7</span><span>5 Linien</span><span>International</span>
+        </div>
+        <div class="proj-details-hint">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span data-i18n="proj.details">Details anzeigen</span>
+        </div>
+      </div>
+
+      <div class="proj-card proj-clickable" data-project="emag" role="button" tabindex="0" aria-haspopup="dialog">
+        <div class="proj-top">
+          <span class="proj-brand pb-fanuc">FANUC / YASKAWA</span>
+          <span class="proj-year">2019–2022</span>
+        </div>
+        <h3 class="proj-name">EMAG – HCM110</h3>
+        <div class="proj-role" data-i18n="proj2.role">Roboterintegration</div>
+        <p class="proj-desc" data-i18n="proj2.desc">Wir integrierten FANUC- und YASKAWA-Roboter in eine HCM110 Doppelspindel-Fräsmaschine nach dem Pendelspindelprinzip. Inbetriebnahme und Serienanlauf erfolgten vor Ort in Mexiko.</p>
+        <div class="proj-chips"><span>EMAG</span><span>Mexiko</span><span>Handling</span></div>
+        <div class="proj-details-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><span data-i18n="proj.details">Details anzeigen</span></div>
+      </div>
+
+      <div class="proj-card proj-clickable" data-project="festool" role="button" tabindex="0" aria-haspopup="dialog">
+        <div class="proj-top">
+          <span class="proj-brand pb-kuka">KUKA</span>
+          <span class="proj-year">2019–2022</span>
+        </div>
+        <h3 class="proj-name">Festool – Tschechien</h3>
+        <div class="proj-role" data-i18n="proj3.role">Stapelzelle / Palettierung</div>
+        <p class="proj-desc" data-i18n="proj3.desc">Wir programmierten und nahmen eine KUKA-Palettierroboterzelle für automatisiertes Zahnrad- und Wellen-Handling in Betrieb — vollautomatische Beladung einer Verzahnungsschleifmaschine.</p>
+        <div class="proj-chips"><span>Festool</span><span>Tschechien</span><span>Palettierung</span></div>
+        <div class="proj-details-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><span data-i18n="proj.details">Details anzeigen</span></div>
+      </div>
+
+      <div class="proj-card proj-clickable" data-project="schmidt" role="button" tabindex="0" aria-haspopup="dialog">
+        <div class="proj-top">
+          <span class="proj-brand pb-fanuc">FANUC</span>
+          <span class="proj-year">2019–2022</span>
+        </div>
+        <h3 class="proj-name">Schmidt Automotive</h3>
+        <div class="proj-role" data-i18n="proj5.role">Doppelgreifer-System</div>
+        <p class="proj-desc" data-i18n="proj5.desc">Wir programmierten und nahmen ein Doppelgreifer-Robotersystem zur simultanen Be- und Entladung mehrerer CNC-Bearbeitungszentren in Betrieb — maximale Maschinenauslastung durch optimierte Taktzeiten.</p>
+        <div class="proj-chips"><span>Automotive</span><span>CNC</span><span>Handling</span></div>
+        <div class="proj-details-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><span data-i18n="proj.details">Details anzeigen</span></div>
+      </div>
+
+      <div class="proj-card proj-clickable" data-project="eldec" role="button" tabindex="0" aria-haspopup="dialog">
+        <div class="proj-top">
+          <span class="proj-brand pb-fanuc">FANUC</span>
+          <span class="proj-year">2019–2022</span>
+        </div>
+        <h3 class="proj-name">Eldec – Charleston, USA</h3>
+        <div class="proj-role" data-i18n="proj6.role">Roboter-Handling | eldec-MIND</div>
+        <p class="proj-desc" data-i18n="proj6.desc">Wir realisierten ein vollautomatisches Roboter-Handlingsystem für Lager-Außen- und -Innenringe zur Beladung einer eldec-MIND Induktionshärteanlage. Inbetriebnahme erfolgte vor Ort in den USA.</p>
+        <div class="proj-chips"><span>Eldec</span><span>USA</span><span>International</span></div>
+        <div class="proj-details-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><span data-i18n="proj.details">Details anzeigen</span></div>
+      </div>
+
+      <!-- BIN-PICKING GROUP -->
+      <div class="bp-group">
+        <div class="bp-group-header">
+          <div class="bp-group-label" data-i18n="badge.binpicking">Bin-Picking</div>
+          <div class="bp-group-sub" data-i18n="badge.binpicking.sub">3D-Kameragestütztes Greifen aus dem Schüttgut</div>
+        </div>
+        <div class="bp-group-body">
+          <div class="bp-group-img">
+            <img src="Infos/my-project-page-1 (18).png" alt="Bin-Picking System">
+          </div>
+          <div class="bp-group-cards">
+            <div class="proj-card proj-clickable" data-project="sew" role="button" tabindex="0" aria-haspopup="dialog">
+              <div class="proj-top">
+                <span class="proj-brand pb-kuka">KUKA</span>
+                <span class="proj-year">2019–2022</span>
+              </div>
+              <h3 class="proj-name">SEW-Eurodrive</h3>
+              <div class="proj-role" data-i18n="proj4.role">3D-Bin-Picking | Hohlwellen</div>
+              <p class="proj-desc" data-i18n="proj4.desc">Wir realisierten die Erstimplementierung eines kameragestützten Bin-Picking-Systems: 3D-Punktwolkenerfassung per Keyence-Kamera zur präzisen Lageerkennung und Einzelentnahme von Hohlwellen aus dem Schüttgutbehälter.</p>
+              <div class="proj-chips"><span>SEW</span><span>Keyence</span><span>Bin-Picking</span></div>
+              <div class="proj-details-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><span data-i18n="proj.details">Details anzeigen</span></div>
+            </div>
+            <div class="proj-card proj-clickable" data-project="hawle" role="button" tabindex="0" aria-haspopup="dialog">
+              <div class="proj-top">
+                <span class="proj-brand pb-kuka">KUKA</span>
+                <span class="proj-year">2019–2022</span>
+              </div>
+              <h3 class="proj-name" data-i18n="proj7.name">Hawle Armaturen – Freilassing</h3>
+              <div class="proj-role" data-i18n="proj7.role">3D-Bin-Picking | Armaturenteile</div>
+              <p class="proj-desc" data-i18n="proj7.desc">Wir implementierten ein kameragestütztes Bin-Picking-System zur vollautomatischen Entnahme von Armaturenteilen aus dem Schüttgut. Robotergeführte Übergabe an eine EMAG-Drehmaschine zur Weiterbearbeitung.</p>
+              <div class="proj-chips"><span>Hawle Armaturen</span><span>Freilassing</span><span>Bin-Picking</span></div>
+              <div class="proj-details-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><span data-i18n="proj.details">Details anzeigen</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CONTACT
+     ═══════════════════════════════════════════════════════════ -->
+<section id="contact">
+  <div class="section-container">
+    <div class="section-header">
+      <div class="section-tag" data-i18n="contact.tag">04 / KONTAKT</div>
+      <h2 class="section-title" data-i18n="contact.title">Projekt anfragen</h2>
+    </div>
+    <div class="contact-grid">
+
+      <div class="contact-info">
+        <p class="contact-intro" data-i18n="contact.intro">Sie suchen einen zuverlässigen Robotik-Dienstleister für Ihr nächstes Automatisierungsprojekt? Wir sind Ihr direkter Ansprechpartner — ohne Umwege, mit klarer Verantwortung. Sprechen Sie uns an.</p>
+        <div class="contact-list">
+          <a href="mailto:jan.bremauer@robopowersolutions.de" class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+            <span>jan.bremauer@robopowersolutions.de</span>
+          </a>
+          <a href="tel:+491639232342" class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 5 2 2 0 0 1 3.6 3h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.6a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 18z"/>
+            </svg>
+            <span>+49 163 923 2342</span>
+          </a>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span data-i18n="contact.location">Raum Göppingen / Baden-Württemberg</span>
+          </div>
+          <a href="https://www.linkedin.com/in/jan-bremauer" target="_blank" rel="noopener" class="contact-item contact-item--linkedin">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            <span>linkedin.com/in/jan-bremauer</span>
+          </a>
+        </div>
+        <div class="contact-avail-badge">
+          <span class="avail-dot"></span>
+          <span data-i18n="contact.avail">Ab sofort verfügbar · Bundesweit & International</span>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="fname" data-i18n="form.name">Name</label>
+            <input type="text"  id="fname"   name="name"    required autocomplete="name">
+          </div>
+          <div class="form-field">
+            <label for="femail" data-i18n="form.email">E-Mail</label>
+            <input type="email" id="femail"  name="email"   required autocomplete="email">
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="fco" data-i18n="form.company">Unternehmen</label>
+          <input type="text" id="fco" name="company" autocomplete="organization">
+        </div>
+        <div class="form-field">
+          <label for="fmsg" data-i18n="form.msg">Projektbeschreibung</label>
+          <textarea id="fmsg" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary form-submit" data-i18n="form.submit">Anfrage senden</button>
+        <p class="form-note" data-i18n="form.note">Antwort innerhalb von 24 Stunden.</p>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="Infos/noBgColor.png" alt="RoboPower Solutions" class="footer-logo-img">
+    </div>
+    <p class="footer-tagline" data-i18n="footer.tagline">Industrielle Roboterprogrammierung & Inbetriebnahme</p>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="#about"    data-i18n="nav.about">Über mich</a>
+      <a href="#services" data-i18n="nav.services">Leistungen</a>
+      <a href="#projects" data-i18n="nav.projects">Projekte</a>
+      <a href="#contact"  data-i18n="nav.contact">Kontakt</a>
+    </nav>
+    <div class="footer-copy">© 2026 RoboPower Solutions &nbsp;·&nbsp; <span data-i18n="footer.vat">Inhaber: Jan Bremauer</span> &nbsp;·&nbsp; <a href="impressum.html" style="color:var(--text-muted);text-decoration:underline">Impressum</a> &nbsp;·&nbsp; <a href="datenschutz.html" style="color:var(--text-muted);text-decoration:underline">Datenschutz</a></div>
+  </div>
+</footer>
+
+<!-- PROJECT MODAL (dynamic) -->
+<div id="projectModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose" aria-label="Schließen">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<!-- Back to top -->
+<button id="backToTop" aria-label="Nach oben scrollen">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>

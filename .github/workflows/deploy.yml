@@ -12,19 +12,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install lftp
+        run: sudo apt-get install -y lftp
+
       - name: Deploy via SFTP
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
-        with:
-          server: access-5020198099.webspace-host.com
-          port: 22
-          username: su206610
-          password: ${{ secrets.SFTP_PASSWORD }}
-          local_path: ./
-          remote_path: /public
-          sftp_only: true
-          delete_remote_files: false
-          args: >
-            --exclude=.git
-            --exclude=.github
-            --exclude=backups
-            --exclude=CLAUDE.md
+        env:
+          SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+        run: |
+          lftp -c "
+          set sftp:auto-confirm yes;
+          set net:max-retries 3;
+          open -u su206610,$SFTP_PASSWORD sftp://access-5020198099.webspace-host.com:22;
+          mirror --reverse --verbose \
+            --exclude='^\.git/' \
+            --exclude='^\.github/' \
+            --exclude='^backups/' \
+            --exclude='^CLAUDE\.md$' \
+            ./ /public/
+          "

@@ -256,6 +256,9 @@ body::before{
   opacity:0;animation:fadeUp .6s var(--ease) .68s forwards;
 }
 
+/* Mobile bird's eye image — hidden on desktop */
+.hero-mobile-img{display:none}
+
 /* Robot image — absolute right */
 .hero-visual{
   position:absolute;right:-40px;top:0;bottom:0;

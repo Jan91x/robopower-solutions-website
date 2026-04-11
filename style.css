@@ -1168,6 +1168,7 @@ section{position:relative;z-index:1}
   .hero-content{margin:0;padding:32px 20px 32px;text-align:center}
   .hero-name{display:flex;justify-content:center}
   .hero-logo-img{width:clamp(200px,65vw,360px)}
+  .hero-brands{justify-content:center}
   .hero-disciplines{justify-content:center}
   .hero-person{justify-content:center}
   .hero-actions{justify-content:center}

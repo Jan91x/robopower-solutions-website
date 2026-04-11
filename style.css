@@ -530,7 +530,7 @@ section{position:relative;z-index:1}
 .kb-yaskawa{background:rgba(0,48,135,.18);    color:#5B8ED6;      border:1px solid rgba(0,48,135,.5)}
 .kb-integra{background:rgba(142,156,176,.12); color:#8E9CB0;      border:1px solid rgba(142,156,176,.4)}
 
-.cert-chips{display:flex;flex-wrap:wrap;gap:5px}
+.cert-chips{display:flex;flex-wrap:wrap;gap:5px;flex:1;min-width:0}
 .cert-chips span{
   font-family:var(--f-mono);font-size:13px;
   color:var(--text-dim);
@@ -1188,7 +1188,7 @@ section{position:relative;z-index:1}
   .stat-item{padding:18px 16px}
   .stat-num{font-size:32px}
   .stat-plus{font-size:20px}
-  .stat-label{font-size:10px}
+  .stat-label{font-size:10px;min-height:2.4em;display:flex;align-items:center;justify-content:center;text-align:center}
 
   .about-left{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr}

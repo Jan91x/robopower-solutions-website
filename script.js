@@ -267,6 +267,14 @@ function applyLanguage(l) {
       ? 'RoboPower Solutions – Roboterprogrammierung & IBN | Jan Bremauer'
       : 'RoboPower Solutions – Robot Programming & Commissioning | Jan Bremauer';
   }
+
+  const url = new URL(window.location.href);
+  if (l === 'en') {
+    url.searchParams.set('lang', 'en');
+  } else {
+    url.searchParams.delete('lang');
+  }
+  history.replaceState(null, '', url.toString());
 }
 
 /* ================================================================
@@ -795,7 +803,8 @@ function initBackToTop() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  applyLanguage('de');
+  const urlLang = new URLSearchParams(window.location.search).get('lang');
+  applyLanguage(urlLang === 'en' ? 'en' : 'de');
   initNavbar();
   initCounters();
   initReveal();

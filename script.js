@@ -34,7 +34,7 @@ const T = {
     'about.tag':   '01 / ÜBER UNS',
     'about.title': 'Wer wir sind',
     'about.role':  'Ihr Spezialist für industrielle Robotik',
-    'about.avail': 'Ab sofort verfügbar',
+    'about.avail': 'Verfügbar auf Anfrage',
     'about.text':  'RoboPower Solutions ist ein spezialisierter Robotik-Dienstleister für Automotive, Maschinenbau und Anlagenbau. Wir bringen 10+ Jahre Projekterfahrung in Programmierung, Safety-Abnahmen und Inbetriebnahme mit — von der ersten Codezeile bis zum Serienstart. Als inhabergeführtes Unternehmen agieren wir mit kurzen Entscheidungswegen und einem persönlichen Ansprechpartner. Unser Ziel: zuverlässige Lösungen, die im ersten Anlauf funktionieren. Wir arbeiten bundesweit und international — flexibel, termingebunden, ergebnisorientiert.',
 
     'meta.location':   'Standort',
@@ -109,7 +109,7 @@ const T = {
     'contact.title':    'Projekt anfragen',
     'contact.intro':    'Sie suchen einen zuverlässigen Robotik-Dienstleister für Ihr nächstes Automatisierungsprojekt? Wir sind Ihr direkter Ansprechpartner — ohne Umwege, mit klarer Verantwortung. Sprechen Sie uns an.',
     'contact.location': 'Raum Göppingen / Baden-Württemberg',
-    'contact.avail':    'Ab sofort verfügbar · Bundesweit & International',
+    'contact.avail':    'Verfügbar auf Anfrage · Bundesweit & International',
 
     'form.name':    'Name',
     'form.email':   'E-Mail',

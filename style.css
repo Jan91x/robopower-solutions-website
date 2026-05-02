@@ -1200,8 +1200,8 @@ section{position:relative;z-index:1}
   .section-container{padding:var(--gap) 20px}
   :root{--nav-h:72px}
   .nav-inner{padding:0 16px}
-  .nav-logo{opacity:0;pointer-events:none;transition:opacity .3s ease}
-  .nav-logo-img{height:48px;width:auto;margin-top:16px}
+  .nav-logo{opacity:0;pointer-events:none;transition:opacity .3s ease;align-self:flex-end;padding-bottom:6px}
+  .nav-logo-img{height:44px;width:auto}
   #navbar.nav-logo-visible .nav-logo{opacity:1;pointer-events:auto}
 }
 

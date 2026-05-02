@@ -1146,7 +1146,7 @@ section{position:relative;z-index:1}
 @media(max-width:768px){
   :root{--gap:80px}
 
-  .nav-hamburger{display:flex}
+  .nav-hamburger{display:flex;align-self:center}
   .nav-links{
     position:fixed;
     top:var(--nav-h);left:0;right:0;

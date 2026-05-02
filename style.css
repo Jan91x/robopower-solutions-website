@@ -172,12 +172,12 @@ body::before{
 /* Hamburger */
 .nav-mobile-actions{display:none}
 .nav-hamburger{
-  display:none;
   flex-direction:column;
   gap:5px;
   background:none;
   border:none;
   padding:8px;
+  cursor:pointer;
 }
 .nav-hamburger span{
   display:block;
@@ -1168,9 +1168,11 @@ section{position:relative;z-index:1}
 
   .nav-mobile-actions{display:flex;align-items:center;gap:4px;height:100%;align-self:stretch}
   .nav-flag-switcher{display:flex;align-items:center;gap:2px}
-  .nav-flag-btn{background:none;border:none;font-size:18px;padding:4px;cursor:pointer;opacity:0.45;transition:opacity .2s;line-height:1;display:flex;align-items:center}
+  .nav-flag-btn{background:none;border:none;font-size:22px;padding:4px 5px;cursor:pointer;opacity:0.45;transition:opacity .2s;line-height:1;display:flex;align-items:center}
   .nav-flag-btn.active{opacity:1}
-  .nav-phone-btn{display:flex;align-items:center;justify-content:center;width:34px;height:100%;color:var(--text-muted);transition:color .2s}
+  .nav-phone-btn{display:flex;align-items:center;justify-content:center;gap:5px;height:100%;padding:0 6px;color:var(--text-muted);transition:color .2s;text-decoration:none;white-space:nowrap}
+  .nav-phone-btn svg{width:18px;height:18px;flex-shrink:0}
+  .nav-phone-number{font-size:13px;font-weight:500;letter-spacing:0.02em}
   .nav-phone-btn:hover{color:var(--accent)}
   .nav-hamburger{display:flex;align-items:center;height:100%;padding:0 8px}
   .nav-links{

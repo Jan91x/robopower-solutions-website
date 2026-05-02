@@ -258,7 +258,7 @@ function applyLanguage(l) {
 
   document.documentElement.lang = l;
 
-  document.querySelectorAll('.lang-btn').forEach(btn => {
+  document.querySelectorAll('.lang-btn, .nav-flag-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === l);
   });
 
@@ -326,8 +326,8 @@ function initNavbar() {
     });
   });
 
-  /* Language buttons */
-  document.querySelectorAll('.lang-btn').forEach(btn => {
+  /* Language buttons (desktop + mobile flags) */
+  document.querySelectorAll('.lang-btn, .nav-flag-btn').forEach(btn => {
     btn.addEventListener('click', () => applyLanguage(btn.dataset.lang));
   });
 }

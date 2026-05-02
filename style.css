@@ -1198,8 +1198,9 @@ section{position:relative;z-index:1}
   .proj-featured{grid-column:span 1}
 
   .section-container{padding:var(--gap) 20px}
-  .nav-inner{padding:0 20px}
+  .nav-inner{padding:0 20px;overflow:visible}
   .nav-logo{opacity:0;pointer-events:none;transition:opacity .3s ease}
+  .nav-logo-img{height:36px}
   #navbar.nav-logo-visible .nav-logo{opacity:1;pointer-events:auto}
 }
 

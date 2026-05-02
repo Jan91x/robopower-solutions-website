@@ -772,6 +772,7 @@ function initModal() {
 
   const open = id => {
     content.innerHTML = renderModal(id);
+    modal.querySelector('.modal-box').scrollTop = 0;
     modal.classList.add('open');
     document.body.style.overflow = 'hidden';
   };

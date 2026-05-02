@@ -1201,7 +1201,7 @@ section{position:relative;z-index:1}
   :root{--nav-h:72px}
   .nav-inner{padding:0 16px}
   .nav-logo{opacity:0;pointer-events:none;transition:opacity .3s ease}
-  .nav-logo-img{height:48px;width:auto}
+  .nav-logo-img{height:48px;width:auto;margin-top:8px}
   #navbar.nav-logo-visible .nav-logo{opacity:1;pointer-events:auto}
 }
 

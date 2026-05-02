@@ -1159,13 +1159,13 @@ section{position:relative;z-index:1}
 @media(max-width:768px){
   :root{--gap:80px}
 
-  .nav-mobile-actions{display:flex;align-items:center;gap:4px;align-self:center}
+  .nav-mobile-actions{display:flex;align-items:center;gap:4px;height:100%;align-self:stretch}
   .nav-flag-switcher{display:flex;align-items:center;gap:2px}
-  .nav-flag-btn{background:none;border:none;font-size:18px;padding:4px;cursor:pointer;opacity:0.45;transition:opacity .2s;line-height:1}
+  .nav-flag-btn{background:none;border:none;font-size:18px;padding:4px;cursor:pointer;opacity:0.45;transition:opacity .2s;line-height:1;display:flex;align-items:center}
   .nav-flag-btn.active{opacity:1}
-  .nav-phone-btn{display:flex;align-items:center;justify-content:center;width:34px;height:34px;color:var(--text-muted);transition:color .2s}
+  .nav-phone-btn{display:flex;align-items:center;justify-content:center;width:34px;height:100%;color:var(--text-muted);transition:color .2s}
   .nav-phone-btn:hover{color:var(--accent)}
-  .nav-hamburger{display:flex;align-self:center}
+  .nav-hamburger{display:flex;align-items:center;height:100%;padding:0 8px}
   .nav-links{
     position:fixed;
     top:var(--nav-h);left:0;right:0;

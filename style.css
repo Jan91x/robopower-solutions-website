@@ -912,7 +912,8 @@ section{position:relative;z-index:1}
   letter-spacing:.18em;text-transform:uppercase;
   color:var(--text-muted);
 }
-.footer-nav{display:flex;gap:22px;margin-top:6px}
+.footer-nav{display:flex;flex-wrap:wrap;gap:12px 22px;margin-top:6px}
+.footer-nav a{white-space:nowrap}
 .footer-nav a{
   font-family:var(--f-heading);font-size:13px;font-weight:700;
   letter-spacing:.12em;text-transform:uppercase;

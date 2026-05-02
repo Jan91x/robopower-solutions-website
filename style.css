@@ -170,6 +170,7 @@ body::before{
 .lang-sep{color:var(--border2);font-size:11px;pointer-events:none}
 
 /* Hamburger */
+.nav-mobile-actions{display:none}
 .nav-hamburger{
   display:none;
   flex-direction:column;

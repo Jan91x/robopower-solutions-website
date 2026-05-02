@@ -1198,9 +1198,10 @@ section{position:relative;z-index:1}
   .proj-featured{grid-column:span 1}
 
   .section-container{padding:var(--gap) 20px}
+  :root{--nav-h:72px}
   .nav-inner{padding:0 16px}
-  .nav-logo{opacity:0;pointer-events:none;transition:opacity .3s ease;flex-shrink:1;min-width:0}
-  .nav-logo-img{height:auto;width:auto;max-height:40px;max-width:160px}
+  .nav-logo{opacity:0;pointer-events:none;transition:opacity .3s ease}
+  .nav-logo-img{height:48px;width:auto}
   #navbar.nav-logo-visible .nav-logo{opacity:1;pointer-events:auto}
 }
 

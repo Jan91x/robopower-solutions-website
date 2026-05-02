@@ -172,12 +172,17 @@ body::before{
 /* Hamburger */
 .nav-mobile-actions{display:none}
 .nav-hamburger{
+  display:none;
   flex-direction:column;
+  justify-content:center;
+  align-items:center;
   gap:5px;
   background:none;
   border:none;
   padding:8px;
   cursor:pointer;
+  width:36px;
+  height:36px;
 }
 .nav-hamburger span{
   display:block;
@@ -1173,7 +1178,7 @@ section{position:relative;z-index:1}
   .nav-phone-btn{display:flex;align-items:center;justify-content:center;width:36px;height:100%;color:var(--text-muted);transition:color .2s;text-decoration:none;flex-shrink:0}
   .nav-phone-btn svg{width:20px;height:20px}
   .nav-phone-btn:hover{color:var(--accent)}
-  .nav-hamburger{display:flex;align-items:center;height:100%;padding:0 6px;flex-shrink:0}
+  .nav-hamburger{display:flex;flex-direction:column;justify-content:center;align-items:center;width:36px;height:100%;padding:0;flex-shrink:0;cursor:pointer}
   .nav-links{
     position:fixed;
     top:var(--nav-h);left:0;right:0;

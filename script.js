@@ -25,6 +25,7 @@ const T = {
     'hd.comm':    'Inbetriebnahme',
     'hd.opt':     'Optimierung',
     'hd.pm':      'Projektleitung / Consulting',
+    'hd.cnc':     'CNC-Automation Thailand/SEA',
 
     'stats.years':     'Jahre Erfahrung',
     'stats.brands':    'Fabrikate',
@@ -35,7 +36,7 @@ const T = {
     'about.title': 'Wer wir sind',
     'about.role':  'Ihr Spezialist für industrielle Robotik',
     'about.avail': 'Verfügbar auf Anfrage',
-    'about.text':  'RoboPower Solutions ist ein spezialisierter Robotik-Dienstleister für Automotive, Maschinenbau und Anlagenbau. Wir bringen 10+ Jahre Projekterfahrung in Programmierung, Safety-Abnahmen und Inbetriebnahme mit — von der ersten Codezeile bis zum Serienstart. Als inhabergeführtes Unternehmen agieren wir mit kurzen Entscheidungswegen und einem persönlichen Ansprechpartner. Unser Ziel: zuverlässige Lösungen, die im ersten Anlauf funktionieren. Wir arbeiten bundesweit und international — flexibel, termingebunden, ergebnisorientiert.',
+    'about.text':  'RoboPower Solutions ist ein spezialisierter Robotik-Dienstleister für Automotive, Maschinenbau und Anlagenbau. Wir bringen 10+ Jahre Projekterfahrung in Programmierung, Safety-Abnahmen und Inbetriebnahme mit — von der ersten Codezeile bis zum Serienstart. Als inhabergeführtes Unternehmen agieren wir mit kurzen Entscheidungswegen und einem persönlichen Ansprechpartner. Unser Ziel: zuverlässige Lösungen, die im ersten Anlauf funktionieren. Wir arbeiten bundesweit und international — flexibel, termingebunden, ergebnisorientiert.\n\nEin besonderer Schwerpunkt liegt auf dem thailändischen und südostasiatischen Markt: Ich war von 2015–2017 als Service- und Anwendungstechniker für 5-Achs-CNC-Maschinen in Thailand tätig und habe 2022–2026 die Mercedes-Benz Gen5 Batteriemontagelinie in Thailand als Lead-Koordinator in Betrieb genommen. Diese Kombination aus Marktkenntnissen, Sprachkompetenz (Englisch) und technischem Know-how macht mich zum direkten Ansprechpartner für Automatisierungsprojekte in der EEC-Region.',
 
     'meta.location':   'Standort',
     'meta.deploy':     'Einsatz',
@@ -79,6 +80,8 @@ const T = {
     'svc.integra':    'Standardisierung nach Mercedes-Benz AG Richtlinie INTEGRA W7. Konforme IBN von KUKA KRC5 Robotersystemen im OEM-Umfeld. Ihr Nutzen: direkte OEM-Freigabe, keine Nacharbeiten.',
     'svc.ibn.name':   'Inbetriebnahme & Projektleitung',
     'svc.ibn':        'Wir übernehmen die Gesamtprojekt-IBN bis zur Serienreife — inklusive Teamkoordination bei komplexen Anlageneinläufen und PROFINET/SPS-Anbindung. Ihr Nutzen: ein Ansprechpartner, volle Verantwortung.',
+    'svc.cnc.name':   'CNC-Automation & Maschinenbeladung | Thailand / SEA',
+    'svc.cnc':        'Vollautomatische Beladung und Automation von CNC-Maschinen in Thailand und SEA. Ich analysiere die Kundensituation vor Ort, konzipiere die passende Lösung und führe sie in Betrieb — von der ROI-Kalkulation bis zum Serienstart. Projekterfahrung: Maschinenbeladung bei Festool (CZ), Schmidt Automotive (DE) und Bin-Picking für EMAG-Maschinen. Thailand-Marktkenntnisse aus 10+ Jahren Projekt- und Berufserfahrung vor Ort.',
 
     'projects.tag':      '03 / REFERENZEN',
     'projects.title':    'Unsere Projektreferenzen',
@@ -86,7 +89,7 @@ const T = {
 
     'proj1.name': 'MBAG Gen5 – Batterielinie',
     'proj1.role': 'Lead-Koordinator Roboterinbetriebnahme',
-    'proj1.desc': 'Wir koordinierten den Serienanlauf der Mercedes-Benz Gen5 Batteriemontagelinie — 4 Linien in Deutschland, 1 Linie in Thailand. Verantwortlich für über 10 KUKA KRC5-Roboterzellen, INTEGRA W7 konform, vom Prototyp bis zur Serienfreigabe.',
+    'proj1.desc': 'Wir koordinierten den Serienanlauf der Mercedes-Benz Gen5 Batteriemontagelinie — 4 Linien in Deutschland, 1 Linie in Thailand — internationale IBN-Verantwortung von Prototyp bis Serienfreigabe, inklusive lokaler Koordination vor Ort in Thailand. Verantwortlich für über 10 KUKA KRC5-Roboterzellen, INTEGRA W7 konform.',
     'proj2.role': 'Roboterintegration',
     'proj2.desc': 'Wir integrierten FANUC- und YASKAWA-Roboter in eine HCM110 Doppelspindel-Fräsmaschine nach dem Pendelspindelprinzip. Inbetriebnahme und Serienanlauf erfolgten vor Ort in Mexiko.',
     'proj3.role': 'Stapelzelle / Palettierung',
@@ -139,6 +142,7 @@ const T = {
     'hd.comm':    'Commissioning',
     'hd.opt':     'Optimization',
     'hd.pm':      'Project Management / Consulting',
+    'hd.cnc':     'CNC Automation Thailand/SEA',
 
     'stats.years':     'Years Experience',
     'stats.brands':    'Robot Brands',
@@ -149,7 +153,7 @@ const T = {
     'about.title': 'Who we are',
     'about.role':  'Your specialist for industrial robotics',
     'about.avail': 'Available immediately',
-    'about.text':  'RoboPower Solutions is a specialized robotics service provider for the automotive, mechanical engineering and plant engineering sectors. We bring 10+ years of project experience in programming, safety sign-offs and commissioning — from the first line of code to series production launch. As an owner-managed company, we operate with short decision-making paths and a dedicated point of contact. Our goal: reliable solutions that work the first time. We work nationwide and internationally — flexible, deadline-driven and results-oriented.',
+    'about.text':  'RoboPower Solutions is a specialized robotics service provider for the automotive, mechanical engineering and plant engineering sectors. We bring 10+ years of project experience in programming, safety sign-offs and commissioning — from the first line of code to series production launch. As an owner-managed company, we operate with short decision-making paths and a dedicated point of contact. Our goal: reliable solutions that work the first time. We work nationwide and internationally — flexible, deadline-driven and results-oriented.\n\nA particular focus lies on the Thai and Southeast Asian market: I worked from 2015–2017 as a service and application engineer for 5-axis CNC machines in Thailand, and coordinated the Mercedes-Benz Gen5 battery assembly line in Thailand as Lead Coordinator from 2022–2026. This combination of market knowledge, language skills (English) and technical expertise makes me the direct point of contact for automation projects in the EEC region.',
 
     'meta.location':  'Location',
     'meta.deploy':    'Deployment',
@@ -193,6 +197,8 @@ const T = {
     'svc.integra':    'Standardization to Mercedes-Benz AG guideline INTEGRA W7. Compliant commissioning of KUKA KRC5 robot systems in OEM environments. Your benefit: direct OEM approval, no rework.',
     'svc.ibn.name':   'Commissioning & Project Management',
     'svc.ibn':        'We handle full project commissioning through to series readiness — including team coordination for complex system startups and PROFINET/PLC integration. Your benefit: one point of contact, full accountability.',
+    'svc.cnc.name':   'CNC Automation & Machine Loading | Thailand / SEA',
+    'svc.cnc':        'Fully automated loading and automation of CNC machines in Thailand and SEA. I analyze the customer situation on-site, design the right solution and commission it — from ROI calculation to series start. Project experience: machine loading at Festool (CZ), Schmidt Automotive (DE) and bin-picking for EMAG machines. Thailand market expertise from 10+ years of project and professional experience on-site.',
 
     'projects.tag':      '03 / REFERENCES',
     'projects.title':    'Our Project References',
@@ -200,7 +206,7 @@ const T = {
 
     'proj1.name': 'MBAG Gen5 – Battery Line',
     'proj1.role': 'Lead Coordinator Robot Commissioning',
-    'proj1.desc': 'We coordinated the series launch of the Mercedes-Benz Gen5 battery assembly line — 4 lines in Germany, 1 line in Thailand. Responsible for over 10 KUKA KRC5 robot cells, INTEGRA W7 compliant, from prototype to series approval.',
+    'proj1.desc': 'We coordinated the series launch of the Mercedes-Benz Gen5 battery assembly line — 4 lines in Germany, 1 line in Thailand — international commissioning responsibility from prototype to series approval, including local coordination on-site in Thailand. Responsible for over 10 KUKA KRC5 robot cells, INTEGRA W7 compliant.',
     'proj2.role': 'Robot Integration',
     'proj2.desc': 'We integrated FANUC and YASKAWA robots into an HCM110 double-spindle milling machine using the pendulum spindle principle. Commissioning and series launch were carried out on-site in Mexico.',
     'proj3.role': 'Stacking Cell / Palletizing',

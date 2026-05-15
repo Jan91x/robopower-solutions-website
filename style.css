@@ -598,6 +598,17 @@ section{position:relative;z-index:1}
 .svc-card:hover{background:var(--surface2)}
 .svc-card:hover::before{background:var(--accent);box-shadow:0 0 10px var(--accent-glow)}
 .svc-featured::before{background:var(--accent);opacity:.7}
+.svc-full{
+  grid-column:1 / -1;
+  flex-direction:row;
+  align-items:flex-start;
+  gap:40px;
+  display:flex;
+}
+.svc-full .svc-left{display:flex;flex-direction:column;min-width:260px;max-width:320px}
+.svc-full .svc-right{flex:1;display:flex;flex-direction:column;justify-content:space-between}
+.svc-full .svc-desc{margin-bottom:20px}
+.svc-full .svc-chips{margin-top:0;display:flex;flex-wrap:wrap;gap:8px}
 
 .svc-badge{
   width:42px;height:42px;border-radius:50%;

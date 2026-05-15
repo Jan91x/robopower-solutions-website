@@ -1177,6 +1177,8 @@ section{position:relative;z-index:1}
   .svc-grid{grid-template-columns:repeat(2,1fr)}
   .proj-grid{grid-template-columns:1fr 1fr}
   .proj-featured{grid-column:span 2}
+  .svc-full{flex-direction:column;gap:16px}
+  .svc-full .svc-left{min-width:unset;max-width:unset}
 }
 
 

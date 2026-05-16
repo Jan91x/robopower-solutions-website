@@ -640,6 +640,7 @@ section{position:relative;z-index:1}
   padding:4px 10px;
   border:1px solid var(--border2);
   color:var(--text-muted);
+  word-break:break-word;
 }
 
 /* ================================================================
@@ -1234,7 +1235,7 @@ section{position:relative;z-index:1}
   .stat-item{padding:18px 16px}
   .stat-num{font-size:32px}
   .stat-plus{font-size:20px}
-  .stat-label{font-size:10px;min-height:2.4em;display:flex;align-items:center;justify-content:center;text-align:center}
+  .stat-label{font-size:9px;letter-spacing:.06em;min-height:2.4em;display:flex;align-items:center;justify-content:center;text-align:center;word-break:break-word}
 
   .about-left{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr}

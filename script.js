@@ -35,7 +35,7 @@ const T = {
     'about.tag':   '01 / ÜBER UNS',
     'about.title': 'Wer wir sind',
     'about.role':  'Ihr Spezialist für industrielle Robotik',
-    'about.avail': 'Verfügbar auf Anfrage',
+    'about.avail': 'Ab sofort verfügbar',
     'about.text':  'KUKA, FANUC & Yaskawa Roboterprogrammierung, Safety-Abnahmen und CNC-Automation in Thailand/SEA — 10+ Jahre Projekterfahrung, bundesweit & international einsetzbar. RoboPower Solutions ist ein inhabergeführter Robotik-Dienstleister für Automotive, Maschinenbau und Anlagenbau — von der ersten Codezeile bis zum Serienstart, mit einem persönlichen Ansprechpartner und kurzen Entscheidungswegen.\n\nEin besonderer Schwerpunkt liegt auf dem thailändischen und südostasiatischen Markt: Ich war von 2015–2017 als Service- und Anwendungstechniker für 5-Achs-CNC-Maschinen in Thailand tätig und habe 2022–2026 die Mercedes-Benz Gen5 Batteriemontagelinie in Thailand als Lead-Koordinator in Betrieb genommen. Diese Kombination aus Marktkenntnissen, Sprachkompetenz (Englisch) und technischem Know-how macht mich zum direkten Ansprechpartner für Automatisierungsprojekte in der EEC-Region.',
 
     'meta.location':   'Standort',
@@ -112,7 +112,7 @@ const T = {
     'contact.title':    'Projekt anfragen',
     'contact.intro':    'Sie suchen einen zuverlässigen Robotik-Dienstleister für Ihr nächstes Automatisierungsprojekt? Wir sind Ihr direkter Ansprechpartner — ohne Umwege, mit klarer Verantwortung. Sprechen Sie uns an.',
     'contact.location': 'Raum Göppingen / Baden-Württemberg',
-    'contact.avail':    'Verfügbar auf Anfrage · Bundesweit & International',
+    'contact.avail':    'Ab sofort verfügbar · Bundesweit & International',
 
     'form.name':    'Name',
     'form.email':   'E-Mail',

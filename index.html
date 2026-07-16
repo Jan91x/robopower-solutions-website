@@ -9,6 +9,13 @@
   <meta name="author" content="Jan Bremauer – RoboPower Solutions">
   <link rel="canonical" href="https://robopowersolutions.de/">
 
+  <!-- Google Search Console Verifizierung (nur nötig, falls DNS-TXT-Verifizierung nicht genutzt wird):
+       <meta name="google-site-verification" content="HIER_CODE_AUS_SEARCH_CONSOLE_EINFUEGEN"> -->
+
+  <!-- Analytics: Plausible – EU-gehostet, cookielos, keine personenbezogenen Daten, kein Consent-Banner nötig -->
+  <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+  <script defer data-domain="robopowersolutions.de" src="https://plausible.io/js/script.js"></script>
+
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="Infos/favicon.svg">
   <link rel="apple-touch-icon" href="Infos/logo_google_business.png">
@@ -72,7 +79,7 @@
 <nav id="navbar">
   <div class="nav-inner">
     <a href="#hero" class="nav-logo">
-      <img src="Infos/noBgColor.png" alt="RoboPower Solutions" class="nav-logo-img">
+      <img src="Infos/noBgColor.webp" alt="RoboPower Solutions" class="nav-logo-img" width="1400" height="536">
     </a>
     <div class="nav-mobile-actions">
       <div class="nav-flag-switcher">
@@ -108,7 +115,7 @@
   <!-- Content -->
   <div class="hero-content">
     <h1 class="hero-name">
-      <img src="Infos/noBgColor.png" alt="RoboPower Solutions" class="hero-logo-img">
+      <img src="Infos/noBgColor.webp" alt="RoboPower Solutions" class="hero-logo-img" width="1400" height="536">
     </h1>
 
     <div class="hero-core">
@@ -139,21 +146,17 @@
     <div class="hero-actions">
       <a href="#contact"  class="btn-primary" data-i18n="hero.cta">Kontakt aufnehmen</a>
       <a href="#services" class="btn-ghost"   data-i18n="hero.cta2">Leistungen entdecken</a>
-      <a href="Infos/Jan_Bremauer_Profil.pdf" download class="btn-ghost btn-icon">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        <span data-i18n="hero.cv">Kompetenzprofil</span>
-      </a>
     </div>
   </div>
 
   <!-- Mobile bird's eye image (hidden on desktop via CSS) -->
   <div class="hero-mobile-img">
-    <img src="Infos/my-project-page-1 (6).png" alt="Robotik Vogelperspektive">
+    <img src="Infos/my-project-page-1 (6).webp" alt="Robotik Vogelperspektive" width="1080" height="1080" fetchpriority="high">
   </div>
 
   <!-- Robot image (right, absolute) -->
   <div class="hero-visual">
-    <img src="Infos/my-project-page-1 (7).png" alt="KUKA, YASKAWA & FANUC Industrieroboter" class="hero-robot-img">
+    <img src="Infos/my-project-page-1 (7).webp" alt="KUKA, YASKAWA & FANUC Industrieroboter" class="hero-robot-img" width="1080" height="1080" fetchpriority="high">
     <div class="hero-img-overlay"></div>
   </div>
 
@@ -196,14 +199,14 @@
       <div class="about-left">
         <div class="profile-card">
           <div class="profile-avatar" id="profileAvatarBtn" role="button" tabindex="0" aria-label="Foto vergrößern" style="cursor:zoom-in">
-            <img src="Infos/Profilfoto.png" alt="Jan Bremauer" class="profile-photo">
+            <img src="Infos/Profilfoto.webp" alt="Jan Bremauer" class="profile-photo" width="540" height="540" loading="lazy" decoding="async">
           </div>
 
           <!-- Photo lightbox -->
           <div id="photoLightbox" class="photo-lightbox" role="dialog" aria-modal="true" aria-label="Profilfoto" style="display:none">
             <div class="photo-lightbox-backdrop"></div>
             <div class="photo-lightbox-img-wrap">
-              <img src="Infos/Profilfoto.png" alt="Jan Bremauer">
+              <img src="Infos/Profilfoto.webp" alt="Jan Bremauer" width="540" height="540" loading="lazy" decoding="async">
               <button class="photo-lightbox-close" aria-label="Schließen">✕</button>
             </div>
           </div>
@@ -337,7 +340,7 @@
     <div class="svc-grid">
 
       <div class="svc-card">
-        <div class="svc-img"><img src="Infos/my-project-page-1 (17).png" alt="KUKA Roboter"></div>
+        <div class="svc-img"><img src="Infos/my-project-page-1 (17).webp" alt="KUKA Roboter" width="1080" height="1080" loading="lazy" decoding="async"></div>
         <div class="svc-badge badge-kuka">K</div>
         <h3 class="svc-name">KUKA</h3>
         <p class="svc-desc" data-i18n="svc.kuka">Wir programmieren und nehmen KUKA-Roboter mit KRL auf KRC4- und KRC5-Steuerungen in Betrieb. Offline-Simulation mit KUKA.Sim, Konfiguration mit WorkVisual — vom Einzelsystem bis zur Serienanlage. Ihr Nutzen: kürzere Anlaufzeiten, reproduzierbare Qualität.</p>
@@ -345,7 +348,7 @@
       </div>
 
       <div class="svc-card">
-        <div class="svc-img"><img src="Infos/my-project-page-1 (16).png" alt="FANUC Roboter"></div>
+        <div class="svc-img"><img src="Infos/my-project-page-1 (16).webp" alt="FANUC Roboter" width="1080" height="1080" loading="lazy" decoding="async"></div>
         <div class="svc-badge badge-fanuc">F</div>
         <h3 class="svc-name">FANUC</h3>
         <p class="svc-desc" data-i18n="svc.fanuc">Programmierung & IBN mit TP und Karel. Simulation in Roboguide. Umfassende Expertise auf R-30iB / iD Controllern. Ihr Nutzen: bewährte Methodik, direkt einsetzbar.</p>
@@ -353,7 +356,7 @@
       </div>
 
       <div class="svc-card">
-        <div class="svc-img"><img src="Infos/my-project-page-1 (14).png" alt="YASKAWA Roboter"></div>
+        <div class="svc-img"><img src="Infos/my-project-page-1 (14).webp" alt="YASKAWA Roboter" width="1080" height="1080" loading="lazy" decoding="async"></div>
         <div class="svc-badge badge-yaskawa">Y</div>
         <h3 class="svc-name">YASKAWA</h3>
         <p class="svc-desc" data-i18n="svc.yaskawa">Roboterprogrammierung & IBN für Yaskawa Motoman. Offline-Simulation mit MotoSim EG-VRC. Ihr Nutzen: herstellerübergreifende Kompetenz aus einer Hand.</p>
@@ -411,7 +414,7 @@
       <!-- FEATURED -->
       <div class="proj-card proj-featured proj-featured--hl proj-clickable" data-project="mbag" role="button" tabindex="0" aria-haspopup="dialog">
         <span class="mbag-badge" data-i18n="badge.flagship">Flagship-Projekt</span>
-        <div class="proj-img"><img src="Infos/my-project-page-1 (12).png" alt="MBAG Batterielinie"></div>
+        <div class="proj-img"><img src="Infos/my-project-page-1 (12).webp" alt="MBAG Batterielinie" width="1080" height="1080" loading="lazy" decoding="async"></div>
         <div class="proj-top">
           <span class="proj-brand pb-kuka">KUKA</span>
           <span class="proj-year">2022–2026</span>
@@ -484,7 +487,7 @@
         </div>
         <div class="bp-group-body">
           <div class="bp-group-img">
-            <img src="Infos/my-project-page-1 (18).png" alt="Bin-Picking System">
+            <img src="Infos/my-project-page-1 (18).webp" alt="Bin-Picking System" width="1080" height="1080" loading="lazy" decoding="async">
           </div>
           <div class="bp-group-cards">
             <div class="proj-card proj-clickable" data-project="sew" role="button" tabindex="0" aria-haspopup="dialog">
@@ -591,7 +594,7 @@
 <footer id="footer">
   <div class="footer-inner">
     <div class="footer-logo">
-      <img src="Infos/noBgColor.png" alt="RoboPower Solutions" class="footer-logo-img">
+      <img src="Infos/noBgColor.webp" alt="RoboPower Solutions" class="footer-logo-img" width="1400" height="536" loading="lazy" decoding="async">
     </div>
     <p class="footer-tagline" data-i18n="footer.tagline">Industrielle Roboterprogrammierung & Inbetriebnahme</p>
     <nav class="footer-nav" aria-label="Footer navigation">

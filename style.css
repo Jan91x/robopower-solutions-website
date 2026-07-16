@@ -381,7 +381,7 @@ section{position:relative;z-index:1}
    ================================================================ */
 #about{
   background:var(--bg);
-  background-image:url('Infos/my-project-page-1 (8).png');
+  background-image:url('Infos/my-project-page-1 (8).webp');
   background-size:cover;
   background-position:center;
   background-attachment:fixed;
@@ -648,7 +648,7 @@ section{position:relative;z-index:1}
    ================================================================ */
 #projects{
   background:var(--bg);
-  background-image:url('Infos/my-project-page-1 (11).png');
+  background-image:url('Infos/my-project-page-1 (11).webp');
   background-size:cover;
   background-position:center;
   background-attachment:fixed;
@@ -828,7 +828,7 @@ section{position:relative;z-index:1}
    ================================================================ */
 #contact{
   background:var(--bg);
-  background-image:url('Infos/my-project-page-1 (13).png');
+  background-image:url('Infos/my-project-page-1 (13).webp');
   background-size:cover;
   background-position:center;
   background-attachment:fixed;

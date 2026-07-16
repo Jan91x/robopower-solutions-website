@@ -19,7 +19,6 @@ const T = {
     'hero.by':    'Gründer & Inhaber:',
     'hero.cta':   'Kontakt aufnehmen',
     'hero.cta2':  'Leistungen entdecken',
-    'hero.cv':    'Kompetenzprofil',
     'hd.prog':    'Programmierung',
     'hd.safety':  'Safety',
     'hd.comm':    'Inbetriebnahme',
@@ -136,7 +135,6 @@ const T = {
     'hero.by':    'Founder & Owner:',
     'hero.cta':   'Get in touch',
     'hero.cta2':  'Explore services',
-    'hero.cv':    'Capability Profile',
     'hd.prog':    'Programming',
     'hd.safety':  'Safety',
     'hd.comm':    'Commissioning',
@@ -444,6 +442,7 @@ function initForm() {
       if (res.ok) {
         btn.textContent = T[lang]['form.sent'];
         btn.classList.add('sent');
+        if (window.plausible) window.plausible('Kontaktanfrage');
         form.reset();
         setTimeout(() => {
           btn.textContent = orig;

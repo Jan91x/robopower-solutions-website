@@ -272,13 +272,15 @@ function applyLanguage(l) {
       : 'RoboPower Solutions – Robot Programming & Commissioning | Jan Bremauer';
   }
 
-  const url = new URL(window.location.href);
-  if (l === 'en') {
-    url.searchParams.set('lang', 'en');
-  } else {
-    url.searchParams.delete('lang');
+  if (!window.location.pathname.startsWith('/en')) {
+    const url = new URL(window.location.href);
+    if (l === 'en') {
+      url.searchParams.set('lang', 'en');
+    } else {
+      url.searchParams.delete('lang');
+    }
+    history.replaceState(null, '', url.toString());
   }
-  history.replaceState(null, '', url.toString());
 }
 
 /* ================================================================
@@ -809,8 +811,9 @@ function initBackToTop() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const urlLang = new URLSearchParams(window.location.search).get('lang');
-  applyLanguage(urlLang === 'en' ? 'en' : 'de');
+  const urlLang  = new URLSearchParams(window.location.search).get('lang');
+  const pathIsEn = window.location.pathname.startsWith('/en/') || window.location.pathname.startsWith('/en');
+  applyLanguage(urlLang === 'en' || pathIsEn ? 'en' : 'de');
   initNavbar();
   initCounters();
   initReveal();

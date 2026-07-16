@@ -164,6 +164,9 @@ body::before{
   color:var(--text-muted);
   padding:5px 10px;
   transition:all .2s;
+  text-decoration:none;
+  display:inline-block;
+  cursor:pointer;
 }
 .lang-btn.active{background:var(--accent);color:#fff}
 .lang-btn:hover:not(.active){color:#fff}
@@ -1188,7 +1191,7 @@ section{position:relative;z-index:1}
 
   .nav-mobile-actions{display:flex;align-items:center;gap:2px;height:100%;align-self:stretch}
   .nav-flag-switcher{display:flex;align-items:center;gap:2px}
-  .nav-flag-btn{background:none;border:none;font-size:22px;padding:4px 5px;cursor:pointer;opacity:0.45;transition:opacity .2s;line-height:1;display:flex;align-items:center}
+  .nav-flag-btn{background:none;border:none;font-size:22px;padding:4px 5px;cursor:pointer;opacity:0.45;transition:opacity .2s;line-height:1;display:flex;align-items:center;text-decoration:none}
   .nav-flag-btn.active{opacity:1}
   .nav-phone-btn{display:flex;align-items:center;justify-content:center;width:36px;height:100%;color:var(--text-muted);transition:color .2s;text-decoration:none;flex-shrink:0}
   .nav-phone-btn svg{width:20px;height:20px}

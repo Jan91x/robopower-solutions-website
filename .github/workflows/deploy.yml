@@ -28,5 +28,6 @@ jobs:
             --exclude='^\.github/' \
             --exclude='^backups/' \
             --exclude='^CLAUDE\.md$' \
+            --exclude='^ANALYTICS_SETUP\.md$' \
             ./ /public/
           "

@@ -40,6 +40,13 @@ Umgesetzt: Plausible Analytics (Web-Statistiken) + Vorbereitung Google Search Co
 - **Plausible-Dashboard** (plausible.io, nach Login): Besucher, Quellen, Top-Seiten, unter "Goals" das Ziel "Kontaktanfrage" → Conversion-Rate.
 - **Search Console**: Menüpunkt "Leistung" → zeigt Suchbegriffe, Klicks, Impressionen, Position. Daten laufen erst ab dem Tag der Verifizierung auf – je früher verifiziert, desto mehr Historie liegt bis Januar 2027 vor.
 
+## Performance-Report (Core Web Vitals)
+
+Zwei Wege, kein zusätzliches Konto nötig:
+
+1. **Sofort-Check, jederzeit:** [pagespeed.web.dev](https://pagespeed.web.dev) öffnen, `robopowersolutions.de` eingeben → liefert direkt Lighthouse-Score + Core Web Vitals (LCP, CLS, INP) getrennt für Mobile & Desktop. Kein Login nötig, Ergebnis nach ~30 Sekunden.
+2. **Laufendes Monitoring, automatisch per Mail:** Sobald Search Console verifiziert ist (siehe oben), zeigt der Menüpunkt **"Page Experience" / "Core Web Vitals"** echte Besucherdaten (nicht nur Labor-Messung) – braucht ca. 28 Tage Datenbasis, bis die erste Bewertung erscheint. Google **mailt automatisch** an die Konto-E-Mail, wenn dort neue Probleme erkannt werden – keine Einstellung nötig, ist Standard bei jedem Search-Console-Konto.
+
 ## Bewusst nicht umgesetzt (auf später verschoben)
 
 - **Consent-Banner**: nicht nötig, da Plausible cookielos/anonym arbeitet. Falls ihr später doch ein Tool mit Cookies einsetzt (z. B. Besucher-Firmenerkennung), muss das nachgezogen werden.

@@ -120,6 +120,8 @@ const T = {
     'form.submit':  'Anfrage senden',
     'form.note':    'Antwort innerhalb von 24 Stunden.',
     'form.sent':    'Gesendet ✓',
+    'form.sheet.done': 'Fertig',
+    'form.sheet.step': 'Schritt {n} von {total}',
 
     'footer.tagline': 'Industrielle Roboterprogrammierung & Inbetriebnahme',
     'footer.vat':     'Inhaber: Jan Bremauer',
@@ -236,6 +238,8 @@ const T = {
     'form.submit':  'Send inquiry',
     'form.note':    'Response within 24 hours.',
     'form.sent':    'Sent ✓',
+    'form.sheet.done': 'Done',
+    'form.sheet.step': 'Step {n} of {total}',
 
     'footer.tagline': 'Industrial Robot Programming & Commissioning',
     'footer.vat':     'Owner: Jan Bremauer',
@@ -470,6 +474,80 @@ function initForm() {
       }, 3000);
     }
   });
+}
+
+/* ================================================================
+   MOBILE FIELD SHEET — Kontaktformular, 1 Feld pro Bildschirm
+   Auf Mobile öffnet jedes Feld ein eigenes Vollbild-Fenster zum
+   Eintippen statt inline zu fokussieren (Checklist-/Typeform-Stil).
+   ================================================================ */
+function initFieldSheet() {
+  const form = document.getElementById('contactForm');
+  const sheet = document.getElementById('fieldSheet');
+  if (!form || !sheet) return;
+
+  const mq        = window.matchMedia('(max-width: 768px)');
+  const stepEl    = document.getElementById('fieldSheetStep');
+  const labelEl   = document.getElementById('fieldSheetLabel');
+  const inputEl   = document.getElementById('fieldSheetInput');
+  const textareaEl= document.getElementById('fieldSheetTextarea');
+  const doneBtn   = document.getElementById('fieldSheetDone');
+  const closeBtn  = document.getElementById('fieldSheetClose');
+
+  const fields = Array.from(form.querySelectorAll('.form-field input, .form-field textarea'));
+  let activeField = null;
+  let activeCtrl  = null;
+
+  function stepText(n, total) {
+    const tpl = (T[lang] && T[lang]['form.sheet.step']) || 'form.sheet.step';
+    return tpl.replace('{n}', n).replace('{total}', total);
+  }
+
+  function openSheet(field) {
+    activeField = field;
+    const idx    = fields.indexOf(field);
+    const label  = field.closest('.form-field').querySelector('label');
+    const isTextarea = field.tagName === 'TEXTAREA';
+
+    labelEl.textContent = label ? label.textContent : '';
+    stepEl.textContent  = stepText(idx + 1, fields.length);
+
+    inputEl.style.display     = isTextarea ? 'none' : 'block';
+    textareaEl.style.display  = isTextarea ? 'block' : 'none';
+    activeCtrl = isTextarea ? textareaEl : inputEl;
+    if (!isTextarea) inputEl.type = field.type || 'text';
+    activeCtrl.value = field.value;
+
+    sheet.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => activeCtrl.focus(), 60);
+  }
+
+  function closeSheet() {
+    sheet.classList.remove('open');
+    document.body.style.overflow = '';
+    if (activeField) activeField.blur();
+    activeField = null;
+    activeCtrl  = null;
+  }
+
+  fields.forEach(field => {
+    field.addEventListener('focus', () => {
+      if (mq.matches) {
+        field.blur();
+        openSheet(field);
+      }
+    });
+  });
+
+  inputEl.addEventListener('input', () => { if (activeField) activeField.value = inputEl.value; });
+  textareaEl.addEventListener('input', () => { if (activeField) activeField.value = textareaEl.value; });
+
+  inputEl.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); closeSheet(); } });
+  sheet.addEventListener('keydown', e => { if (e.key === 'Escape') closeSheet(); });
+
+  doneBtn.addEventListener('click', closeSheet);
+  closeBtn.addEventListener('click', closeSheet);
 }
 
 /* ================================================================
@@ -819,6 +897,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initReveal();
   initSmoothScroll();
   initForm();
+  initFieldSheet();
   initModal();
   initBackToTop();
   initPhotoLightbox();

@@ -1289,7 +1289,7 @@ section{position:relative;z-index:1}
      video layer to a shorter top band (instead of the full section height) makes
      cover's height-driven crop far less extreme -- still full-bleed, no floating
      letterboxed video, just noticeably less zoomed in. */
-  .hero-video-bg{top:170px;bottom:auto;height:60%}
+  .hero-video-bg{top:235px;bottom:auto;height:60%}
   .hero-video,.hero-video-fallback{object-fit:cover;object-position:55% 30%}
 
   .nav-mobile-actions{display:flex;align-items:center;gap:2px;height:100%;align-self:stretch}

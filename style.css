@@ -1289,7 +1289,7 @@ section{position:relative;z-index:1}
      video layer to a shorter top band (instead of the full section height) makes
      cover's height-driven crop far less extreme -- still full-bleed, no floating
      letterboxed video, just noticeably less zoomed in. */
-  .hero-video-bg{top:0;bottom:auto;height:60%}
+  .hero-video-bg{top:170px;bottom:auto;height:60%}
   .hero-video,.hero-video-fallback{object-fit:cover;object-position:55% 30%}
 
   .nav-mobile-actions{display:flex;align-items:center;gap:2px;height:100%;align-self:stretch}
@@ -1319,7 +1319,7 @@ section{position:relative;z-index:1}
 
   #hero{flex-direction:column;min-height:auto}
   .hero-content{margin:0;padding:32px 20px 32px;text-align:center}
-  .hero-name{display:flex;justify-content:center;background:var(--bg);padding:16px 0;margin-left:-20px;margin-right:-20px}
+  .hero-name{display:flex;justify-content:center}
   .hero-logo-img{width:clamp(200px,65vw,360px)}
   .hero-brands{justify-content:center}
   .hero-disciplines{justify-content:center}

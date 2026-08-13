@@ -1318,7 +1318,7 @@ section{position:relative;z-index:1}
   .lang-switcher{margin-left:0;margin-top:10px}
 
   #hero{flex-direction:column;min-height:auto}
-  .hero-content{margin:0;padding:32px 20px 32px;text-align:center}
+  .hero-content{margin:0;padding:32px 20px 32px;text-align:center;background:var(--bg);position:relative;z-index:2}
   .hero-name{display:flex;justify-content:center}
   .hero-logo-img{width:clamp(200px,65vw,360px)}
   .hero-brands{justify-content:center}

@@ -15,6 +15,16 @@ jobs:
       - name: Install lftp
         run: sudo apt-get install -y lftp
 
+      - name: Cache-bust CSS/JS references
+        run: |
+          SHA="${GITHUB_SHA::8}"
+          find . -name '*.html' -not -path './backups/*' -not -path './.git/*' -print0 | \
+            xargs -0 sed -i \
+              -e "s/=\"style\.css\"/=\"style.css?v=$SHA\"/g" \
+              -e "s/=\"\.\.\/style\.css\"/=\"..\/style.css?v=$SHA\"/g" \
+              -e "s/=\"script\.js\"/=\"script.js?v=$SHA\"/g" \
+              -e "s/=\"\.\.\/script\.js\"/=\"..\/script.js?v=$SHA\"/g"
+
       - name: Deploy via SFTP
         env:
           SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}

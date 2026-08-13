@@ -1285,9 +1285,10 @@ section{position:relative;z-index:1}
 @media(max-width:768px){
   :root{--gap:80px}
 
-  /* Narrow viewport crops the 16:9 video much tighter than desktop -- keep the
-     visible sliver centered on the robot instead of the empty left background */
-  .hero-video,.hero-video-fallback{object-position:60% center}
+  /* Narrow viewport crops the 16:9 video much tighter than desktop -- switch to
+     contain so the full frame (and the robot) stays visible instead of a tight,
+     zoomed-in crop of mostly empty background */
+  .hero-video,.hero-video-fallback{object-fit:contain;object-position:60% center;background:var(--bg)}
 
   .nav-mobile-actions{display:flex;align-items:center;gap:2px;height:100%;align-self:stretch}
   .nav-flag-switcher{display:flex;align-items:center;gap:2px}

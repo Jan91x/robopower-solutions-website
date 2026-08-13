@@ -320,6 +320,9 @@ body::before{
 .hero-robot-img{
   width:100%;height:auto;max-height:100%;
   object-fit:contain;object-position:center center;display:block;
+  filter:saturate(.8) brightness(.88) contrast(.96);
+  -webkit-mask-image:radial-gradient(ellipse at center,black 58%,transparent 92%);
+  mask-image:radial-gradient(ellipse at center,black 58%,transparent 92%);
 }
 .hero-img-overlay{
   display:none;

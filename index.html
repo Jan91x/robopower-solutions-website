@@ -117,13 +117,6 @@
      ═══════════════════════════════════════════════════════════ -->
 <section id="hero">
 
-  <!-- Background video -->
-  <div class="hero-video-bg">
-    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="videos/hero_poster.jpg" src="videos/hero-loop.mp4"></video>
-    <img class="hero-video-fallback" src="videos/hero_poster.jpg" alt="" width="1280" height="720" loading="lazy">
-    <div class="hero-video-overlay"></div>
-  </div>
-
   <!-- Content -->
   <div class="hero-content">
     <h1 class="hero-name">
@@ -159,6 +152,15 @@
       <a href="#contact"  class="btn-primary" data-i18n="hero.cta">Kontakt aufnehmen</a>
       <a href="#services" class="btn-ghost"   data-i18n="hero.cta2">Leistungen entdecken</a>
     </div>
+  </div>
+
+  <!-- Background video: absolute full-bleed on desktop, becomes an in-flow
+       block on mobile (see mobile media query) so it sits precisely between
+       the buttons above and the caption below, no guessed offsets needed -->
+  <div class="hero-video-bg">
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="videos/hero_poster.jpg" src="videos/hero-loop.mp4"></video>
+    <img class="hero-video-fallback" src="videos/hero_poster.jpg" alt="" width="1280" height="720" loading="lazy">
+    <div class="hero-video-overlay"></div>
   </div>
 
   <!-- Caption between video and mobile photo (mobile only) -->

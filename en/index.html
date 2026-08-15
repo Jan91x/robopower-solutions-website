@@ -70,6 +70,51 @@
   }
   </script>
 
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Who provides KUKA, FANUC and Yaskawa robot programming?",
+        "acceptedAnswer": { "@type": "Answer", "text": "RoboPower Solutions, run by Jan Bremauer, is an owner-managed robotics service provider with 10+ years of project experience. We program and commission robots from all three brands — nationwide and internationally." }
+      },
+      {
+        "@type": "Question",
+        "name": "What services does RoboPower Solutions offer specifically?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Robot programming (KUKA/FANUC/Yaskawa), safety sign-offs, INTEGRA W7 standardization for Mercedes-Benz AG, commissioning & project management, and CNC automation / machine loading in Thailand/SEA." }
+      },
+      {
+        "@type": "Question",
+        "name": "What's included in a robot safety sign-off?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Safety configuration, zone setup and sign-off to Machinery Directive standards — across all robot brands, using SafeOperation 3.4, DCS and FSU." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does RoboPower Solutions also handle CNC automation in Thailand/SEA?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. With 10+ years of market experience in Thailand, we handle fully automated loading and automation of CNC machines — from on-site analysis to series start." }
+      },
+      {
+        "@type": "Question",
+        "name": "Which regions does RoboPower Solutions work in?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Based in Göppingen (Baden-Württemberg). Projects have been realized in Germany, Mexico, the USA, the Czech Republic and Thailand — available nationwide and internationally, on-site and remote." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the INTEGRA W7 standard?",
+        "acceptedAnswer": { "@type": "Answer", "text": "INTEGRA W7 is the Mercedes-Benz AG guideline for standardizing KUKA KRC5 robot systems in OEM environments. RoboPower Solutions has been certified to this standard since 2023." }
+      },
+      {
+        "@type": "Question",
+        "name": "How quickly does RoboPower Solutions respond to inquiries?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Responses are typically sent within 24 hours." }
+      }
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900;1,14..32,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -99,6 +144,7 @@
       <a href="#about"    class="nav-link" data-i18n="nav.about">About Us</a>
       <a href="#services" class="nav-link" data-i18n="nav.services">Services</a>
       <a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a>
+      <a href="#faq"      class="nav-link" data-i18n="nav.faq">FAQ</a>
       <a href="#contact"  class="nav-link" data-i18n="nav.contact">Contact</a>
       <div class="lang-switcher">
         <a href="/" class="lang-btn" data-lang="de">DE</a>
@@ -536,12 +582,54 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════
+     FAQ
+     ═══════════════════════════════════════════════════════════ -->
+<section id="faq">
+  <div class="section-container">
+    <div class="section-header">
+      <div class="section-tag" data-i18n="faq.tag">04 / FAQ</div>
+      <h2 class="section-title" data-i18n="faq.title">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3 class="faq-q" data-i18n="faq.q1">Who provides KUKA, FANUC and Yaskawa robot programming?</h3>
+        <p class="faq-a" data-i18n="faq.a1">RoboPower Solutions, run by Jan Bremauer, is an owner-managed robotics service provider with 10+ years of project experience. We program and commission robots from all three brands — nationwide and internationally.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q" data-i18n="faq.q2">What services does RoboPower Solutions offer specifically?</h3>
+        <p class="faq-a" data-i18n="faq.a2">Robot programming (KUKA/FANUC/Yaskawa), safety sign-offs, INTEGRA W7 standardization for Mercedes-Benz AG, commissioning & project management, and CNC automation / machine loading in Thailand/SEA.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q" data-i18n="faq.q3">What's included in a robot safety sign-off?</h3>
+        <p class="faq-a" data-i18n="faq.a3">Safety configuration, zone setup and sign-off to Machinery Directive standards — across all robot brands, using SafeOperation 3.4, DCS and FSU.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q" data-i18n="faq.q4">Does RoboPower Solutions also handle CNC automation in Thailand/SEA?</h3>
+        <p class="faq-a" data-i18n="faq.a4">Yes. With 10+ years of market experience in Thailand (including as a service and application technician for 5-axis CNC machines from 2015–2017), we handle fully automated loading and automation of CNC machines — from on-site analysis to series start.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q" data-i18n="faq.q5">Which regions does RoboPower Solutions work in?</h3>
+        <p class="faq-a" data-i18n="faq.a5">Based in Göppingen (Baden-Württemberg). Projects have been realized in Germany, Mexico, the USA, the Czech Republic and Thailand — available nationwide and internationally, on-site and remote.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q" data-i18n="faq.q6">What is the INTEGRA W7 standard?</h3>
+        <p class="faq-a" data-i18n="faq.a6">INTEGRA W7 is the Mercedes-Benz AG guideline for standardizing KUKA KRC5 robot systems in OEM environments. RoboPower Solutions has been certified to this standard since 2023.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q" data-i18n="faq.q7">How quickly does RoboPower Solutions respond to inquiries?</h3>
+        <p class="faq-a" data-i18n="faq.a7">Responses are typically sent within 24 hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
      CONTACT
      ═══════════════════════════════════════════════════════════ -->
 <section id="contact">
   <div class="section-container">
     <div class="section-header">
-      <div class="section-tag" data-i18n="contact.tag">04 / CONTACT</div>
+      <div class="section-tag" data-i18n="contact.tag">05 / CONTACT</div>
       <h2 class="section-title" data-i18n="contact.title">Request a project</h2>
     </div>
     <div class="contact-grid">
@@ -621,6 +709,7 @@
       <a href="#about"    data-i18n="nav.about">About Us</a>
       <a href="#services" data-i18n="nav.services">Services</a>
       <a href="#projects" data-i18n="nav.projects">Projects</a>
+      <a href="#faq"      data-i18n="nav.faq">FAQ</a>
       <a href="#contact"  data-i18n="nav.contact">Contact</a>
     </nav>
     <div class="footer-copy">© 2026 RoboPower Solutions &nbsp;·&nbsp; <span data-i18n="footer.vat">Owner: Jan Bremauer</span> &nbsp;·&nbsp; <a href="../impressum.html" style="color:var(--text-muted);text-decoration:underline">Imprint</a> &nbsp;·&nbsp; <a href="../datenschutz.html" style="color:var(--text-muted);text-decoration:underline">Privacy Policy</a></div>

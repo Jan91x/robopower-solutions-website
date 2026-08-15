@@ -862,6 +862,26 @@ section{position:relative;z-index:1}
 }
 
 /* ================================================================
+   FAQ
+   ================================================================ */
+.faq-list{
+  display:flex;flex-direction:column;
+  border:1px solid var(--border);
+}
+.faq-item{
+  padding:26px 30px;
+  border-bottom:1px solid var(--border);
+}
+.faq-item:last-child{border-bottom:none}
+.faq-q{
+  font-family:var(--f-heading);font-size:17px;font-weight:800;
+  letter-spacing:-.01em;color:var(--text);margin-bottom:10px;
+}
+.faq-a{
+  font-size:15px;font-weight:500;line-height:1.75;color:var(--text-dim);
+}
+
+/* ================================================================
    CONTACT
    ================================================================ */
 #contact{

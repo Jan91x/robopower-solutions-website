@@ -1,0 +1,26 @@
+# RoboPower Solutions
+
+> Freelance-Dienstleister für industrielle Roboterprogrammierung, Inbetriebnahme (IBN) und Safety-Abnahmen für KUKA, FANUC und Yaskawa Industrieroboter. Zusätzlich CNC-Automation und Maschinenbeladung in Thailand/SEA. Inhaber: Jan Bremauer, 10+ Jahre Projekterfahrung, Standort Göppingen (Baden-Württemberg), bundesweit und international einsetzbar.
+
+## Leistungen
+- KUKA-Roboterprogrammierung (KRL, KRC4/KRC5, KUKA.Sim, WorkVisual)
+- FANUC-Roboterprogrammierung (TP, Karel, Roboguide, R-30iB/iD)
+- Yaskawa-Roboterprogrammierung (Motoman, MotoSim EG-VRC)
+- Safety-Abnahmen (SafeOperation 3.4, DCS, FSU) – herstellerübergreifend
+- INTEGRA W7 – Standardisierung nach Mercedes-Benz AG Richtlinie, KUKA KRC5
+- Inbetriebnahme & Projektleitung, inkl. PROFINET/SPS-Anbindung
+- CNC-Automation & Maschinenbeladung in Thailand/SEA (Analyse, Konzept, ROI, Inbetriebnahme)
+
+## Referenzprojekte
+- Mercedes-Benz Gen5 Batteriemontagelinie (GROB-WERKE, 2022–2026): Lead-Koordinator IBN, 5 Linien DE+Thailand, KUKA KRC5, INTEGRA W7
+- EMAG HCM110 (2019–2022): FANUC/YASKAWA-Roboterintegration, Mexiko
+- Festool (Tschechien): KUKA-Palettierzelle
+- Schmidt Automotive: FANUC-Doppelgreifer-System
+- Eldec, Charleston USA: FANUC-Handlingsystem, eldec-MIND
+- SEW-Eurodrive & Hawle Armaturen: 3D-Bin-Picking (Keyence-Kamera)
+
+## Kontakt
+- Website: https://robopowersolutions.de/ (Deutsch), https://robopowersolutions.de/en/ (English)
+- E-Mail: support@robopowersolutions.de
+- Standort: Göppingen / Baden-Württemberg, Deutschland
+- Verfügbarkeit: ab sofort, bundesweit & international

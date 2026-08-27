@@ -1,53 +1,46 @@
-# Analytics & Search Console – Setup-Anleitung
+# Analytics & Search Console – Stand und Plan
 
-Umgesetzt: Plausible Analytics (Web-Statistiken) + Vorbereitung Google Search Console (Suchbegriffe) + Conversion-Tracking fürs Kontaktformular.
+**Stand: August 2026**
 
-## Warum Plausible statt Google Analytics
+## Aktueller Zustand
 
-- **Cookielos, keine personenbezogenen Daten** → nach aktueller Rechtslage ist **kein Consent-Banner nötig** (§ 25 TTDSG greift nur bei Cookies/Endgerätezugriff). Einfacher, schneller, keine UX-Reibung.
-- **EU-Server** (Hetzner, Deutschland) → kein US-Datentransfer-Problem wie bei GA4.
-- Ein 1-Zeilen-Script (< 1 KB), kein Einfluss auf Ladezeit/Core Web Vitals.
-- Liefert genau das Gewünschte: Besucherzahl, Herkunftsland, Quelle/Referrer (z. B. "Google organisch", "LinkedIn", "Direktaufruf"), meistbesuchte Seiten.
-- Zeigt **keine** Suchbegriffe – dafür ist Google Search Console da (siehe unten).
+| Baustein | Status | Was es liefert |
+|---|---|---|
+| **Google Search Console** | ✅ aktiv (per DNS-TXT verifiziert) | Suchbegriffe, Klicks, Impressionen, Position, gefundene Seiten – kostenlos |
+| **Web-Analytics (Besucherzahlen)** | ⛔ bewusst noch nicht aktiv | – |
+| **Conversion-Tracking Kontaktformular** | 🕓 im Code vorbereitet, inaktiv | – |
 
-## Was im Code bereits eingebaut ist
+## Warum noch kein Web-Analytics läuft
 
-1. **Plausible-Snippet** in [index.html](index.html) `<head>` – zeigt sich selbst als "not configured" an, bis der Domain-Name in deinem Plausible-Konto angelegt ist. Nichts weiter im Code zu tun.
-2. **Conversion-Ziel "Kontaktanfrage"** in [script.js](script.js) – wird bei jeder erfolgreich abgeschickten Kontaktanfrage ausgelöst. Zeigt dir später: *Besucher → wie viele wurden zur Anfrage*.
-3. **Datenschutzerklärung** ([datenschutz.html](datenschutz.html), Abschnitt 5) bereits um Plausible + Search Console ergänzt.
-4. **Platzhalter für Search-Console-Meta-Tag** in [index.html](index.html) `<head>` (auskommentiert) – nur nötig, falls du die HTML-Meta-Methode statt DNS-TXT nutzt (siehe unten).
+Ursprünglich war Plausible eingebunden – allerdings ohne dass je ein Konto angelegt wurde, d. h. das Script lief ins Leere und hat **nie Daten erfasst**. Im August 2026 wurde entschieden, den Start bewusst auf Januar 2027 (Akquise-Beginn) zu legen. Gründe:
 
-## Was DU extern anlegen/verifizieren musst
+- **Bis dahin gibt es praktisch keinen Traffic zu messen.** Ohne aktive Akquise ist die „Historie", die man kaufen würde, nahezu leer.
+- **Die Gratis-Testphase lässt sich nicht als Datensammler zweckentfremden.** Laut Plausible-Doku wird bei Ablauf der 30 Tage die *Erfassung gestoppt* (nicht nur das Dashboard gesperrt). Ein Start im August hätte einen leeren Monat gebracht und die einmalige Testphase verbraucht.
+- **Search Console deckt den wertvollsten Teil schon kostenlos ab** – nämlich wonach Leute suchen, wenn sie die Seite finden.
 
-### 1. Plausible-Konto
-1. Auf [plausible.io](https://plausible.io) registrieren (kostenpflichtig ab ca. 9 €/Monat, 30 Tage kostenlos testen; Alternative: selbst hosten, aber bei IONOS-Static-Hosting unpraktisch).
-2. Neue Site anlegen mit Domain `robopowersolutions.de`.
-3. Fertig – sobald die Domain im Konto hinterlegt ist, erfasst das bereits eingebaute Script automatisch Daten. Kein weiterer Code-Schritt nötig.
+Der tote Script-Aufruf wurde deshalb aus `index.html` und `en/index.html` entfernt (spart bei jedem Seitenaufruf eine sinnlose Anfrage), und die Datenschutzerklärung (Abschnitt 5) wurde korrigiert – sie hatte zuvor Plausible als aktiv genutzten Dienst beschrieben.
 
-### 2. Google Search Console
-1. [search.google.com/search-console](https://search.google.com/search-console) öffnen, mit Google-Konto anmelden.
-2. Property-Typ **"Domain"** wählen (nicht "URL-Präfix") und `robopowersolutions.de` eingeben.
-3. Google zeigt dir einen **DNS-TXT-Eintrag** an (z. B. `google-site-verification=abc123...`).
-4. Diesen TXT-Eintrag bei IONOS im DNS-Bereich deiner Domain anlegen (Typ: TXT, Name: `@` bzw. leer, Wert: der von Google angezeigte String).
-5. Zurück in Search Console auf "Bestätigen" klicken. DNS-Propagation kann bis zu 24 Std. dauern.
+## Wie du jetzt schon Daten ausliest
 
-   *Alternative, falls du DNS nicht anfassen willst:* Property-Typ "URL-Präfix" wählen → Methode "HTML-Tag" → den gelieferten Code in [index.html](index.html) an der markierten Stelle (`<!-- Google Search Console Verifizierung ... -->`) eintragen und die Kommentarzeichen entfernen.
+**Google Search Console** → [search.google.com/search-console](https://search.google.com/search-console) → Menüpunkt **„Leistung"**.
+Dort siehst du: über welche Suchbegriffe Leute auf die Seite kommen, wie viele klicken, wie oft die Seite in Suchergebnissen erscheint, und auf welcher Position. Historie: ca. 16 Monate.
 
-6. Danach in Search Console unter "Sitemaps" die vorhandene [sitemap.xml](sitemap.xml) einreichen (URL: `https://robopowersolutions.de/sitemap.xml`).
+## To-do im Januar 2027 (Akquise-Start)
 
-## Wie du später die Daten ausliest
+1. **Anbieter wählen** (Preise/Konditionen bitte neu prüfen – Stand der Recherche: August 2026):
+   - **Plausible Starter** – ca. 9 $/Monat bei 10.000 Seitenaufrufen. Estnische Firma, Server bei Hetzner in Deutschland, cookiefrei, Conversion-Ziele bereits im günstigsten Tarif enthalten. 30 Tage kostenlos testen ohne Kreditkarte.
+   - **Pirsch Analytics** – ca. 6 $/Monat. Deutsche GmbH, in Deutschland gehostet, cookiefrei, **mit AVV (Auftragsverarbeitungsvertrag)** – relevant, falls dir formale DSGVO-Papiere wichtig sind.
+   - Beide erfüllen die Kernanforderung: cookiefrei → **kein Consent-Banner nötig**.
+2. **Snippet einbauen:** an der markierten Stelle im `<head>` von `index.html` **und** `en/index.html` (Kommentarblock „Web-Analytics ... Geplanter Start Januar 2027").
+3. **Conversion-Ziel aktivieren:** In `script.js` (Funktion `initForm`) steht bereits `if (window.plausible) window.plausible('Kontaktanfrage');`. Bei Plausible reicht es, im Dashboard ein Custom-Event-Ziel namens `Kontaktanfrage` anzulegen – am Code ändert sich nichts. Bei einem anderen Anbieter muss diese eine Zeile auf dessen Event-Syntax angepasst werden.
+4. **Datenschutzerklärung ergänzen:** Abschnitt 5 in `datenschutz.html` beschreibt aktuell korrekt „kein Analysedienst". Beim Aktivieren dort den gewählten Dienst eintragen (Anbieter, Sitz, Serverstandort, Cookiefreiheit, Rechtsgrundlage Art. 6 Abs. 1 lit. f DSGVO, Link zur Datenschutzerklärung des Anbieters).
 
-- **Plausible-Dashboard** (plausible.io, nach Login): Besucher, Quellen, Top-Seiten, unter "Goals" das Ziel "Kontaktanfrage" → Conversion-Rate.
-- **Search Console**: Menüpunkt "Leistung" → zeigt Suchbegriffe, Klicks, Impressionen, Position. Daten laufen erst ab dem Tag der Verifizierung auf – je früher verifiziert, desto mehr Historie liegt bis Januar 2027 vor.
+## Was du dir dabei sparst
 
-## Performance-Report (Core Web Vitals)
+Konsequent nichts zahlen bis Januar spart rund 45 $ – ohne nennenswerten Datenverlust, weil in diesem Zeitraum ohnehin kaum Besucher zu erwarten sind.
 
-Zwei Wege, kein zusätzliches Konto nötig:
+## Bewusst offen / für später
 
-1. **Sofort-Check, jederzeit:** [pagespeed.web.dev](https://pagespeed.web.dev) öffnen, `robopowersolutions.de` eingeben → liefert direkt Lighthouse-Score + Core Web Vitals (LCP, CLS, INP) getrennt für Mobile & Desktop. Kein Login nötig, Ergebnis nach ~30 Sekunden.
-2. **Laufendes Monitoring, automatisch per Mail:** Sobald Search Console verifiziert ist (siehe oben), zeigt der Menüpunkt **"Page Experience" / "Core Web Vitals"** echte Besucherdaten (nicht nur Labor-Messung) – braucht ca. 28 Tage Datenbasis, bis die erste Bewertung erscheint. Google **mailt automatisch** an die Konto-E-Mail, wenn dort neue Probleme erkannt werden – keine Einstellung nötig, ist Standard bei jedem Search-Console-Konto.
-
-## Bewusst nicht umgesetzt (auf später verschoben)
-
-- **Consent-Banner**: nicht nötig, da Plausible cookielos/anonym arbeitet. Falls ihr später doch ein Tool mit Cookies einsetzt (z. B. Besucher-Firmenerkennung), muss das nachgezogen werden.
-- **Besucher-Firmenerkennung (B2B-Deanonymisierung, z. B. Echobot/Leadfeeder) & Google Ads**: bewusst erst zum Akquise-Start Januar 2027, da laufende Kosten und aktuell kein aktiver Vertrieb.
+- **Bing Webmaster Tools** – Microsoft Copilot arbeitet auf dem Bing-Index, nicht auf Google. Für KI-Sichtbarkeit über Copilot wäre eine Verifizierung dort der direkteste Hebel. Noch nicht eingerichtet.
+- **Besucher-Firmenerkennung (B2B) & Google Ads** – erst zum Akquise-Start sinnvoll, laufende Kosten.
+- **Consent-Banner** – aktuell nicht nötig (keine Cookies, kein Tracking). Wird erst relevant, falls ein Tool mit Cookies eingesetzt wird (z. B. Firmenerkennung).

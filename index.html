@@ -12,12 +12,14 @@
   <link rel="alternate" hreflang="en" href="https://robopowersolutions.de/en/">
   <link rel="alternate" hreflang="x-default" href="https://robopowersolutions.de/">
 
-  <!-- Google Search Console Verifizierung (nur nötig, falls DNS-TXT-Verifizierung nicht genutzt wird):
-       <meta name="google-site-verification" content="HIER_CODE_AUS_SEARCH_CONSOLE_EINFUEGEN"> -->
+  <!-- Google Search Console: per DNS-TXT-Eintrag verifiziert, liefert Klick- und Suchbegriffsdaten. -->
 
-  <!-- Analytics: Plausible – EU-gehostet, cookielos, keine personenbezogenen Daten, kein Consent-Banner nötig -->
-  <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
-  <script defer data-domain="robopowersolutions.de" src="https://plausible.io/js/script.js"></script>
+  <!-- Web-Analytics: bewusst noch NICHT aktiv (Stand August 2026). Geplanter Start zum
+       Akquise-Beginn Januar 2027 – bis dahin gibt es kaum Traffic zu messen. Zum Aktivieren
+       hier das Snippet des gewählten Anbieters einsetzen; der Conversion-Aufruf für das
+       Kontaktformular liegt bereits in script.js (initForm) und ist abgesichert, d.h. er
+       löst erst aus, sobald das Analytics-Script tatsächlich geladen wird.
+       Details siehe ANALYTICS_SETUP.md -->
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="Infos/favicon.svg">

@@ -1,3 +1,19 @@
+# Interne Markdown-Dokumentation nie ausliefern. Der Deploy-Workflow schliesst .md-Dateien
+# zwar vom Upload aus, loescht aber nichts, was frueher schon hochgeladen wurde (lftp mirror
+# ohne --delete) -- eine veraltete ANALYTICS_SETUP.md liegt daher noch auf dem Server.
+# Die beiden Bloecke decken Apache 2.4 und 2.2 ab; llms.txt/robots.txt (.txt) sind nicht betroffen.
+<IfModule mod_authz_core.c>
+  <FilesMatch "\.md$">
+    Require all denied
+  </FilesMatch>
+</IfModule>
+<IfModule !mod_authz_core.c>
+  <FilesMatch "\.md$">
+    Order allow,deny
+    Deny from all
+  </FilesMatch>
+</IfModule>
+
 <IfModule mod_headers.c>
   # HTML: always revalidate with the server, never show a stale page after a deploy
   <FilesMatch "\.html$">
